@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="img/png" sizes="32x32" href="img/favicon.png">
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/style.css">
   <title>FINTECH</title>
 </head>
@@ -98,32 +99,32 @@
 
           <nav class="nav">
             <div class="nav__inner">
-              <div class="nav__list">
-                <div class="nav__item">
-                  <a class="nav__link" href="#">Главная
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <button class="nav__link" id="mainBtn">Главная
                     <svg class="nav__angle">
                       <use href="sprite.svg#angle"></use>
                     </svg>
-                  </a>
+                  </button>
                   <!-- <span><img class="nav__angle" src="img/Main/angle.svg" alt=""></span> -->
-                  <ul class="nav__dropdown">
+                  <ul class="nav__dropdown" id="mainToggle">
                     <li class="nav__dropdown-item"><a href="nav__dropdown-link">Наш продукт</a></li>
                     <li class="nav__dropdown-item"><a href="nav__dropdown-link">Защита</a></li>
                     <li class="nav__dropdown-item"><a href="nav__dropdown-link">Заработок</a></li>
                     <li class="nav__dropdown-item"><a href="nav__dropdown-link">Результаты</a></li>
                   </ul>
-                </div>
-                <div class="nav__item">
-                  <a class="nav__link" href="#">О продукте &laquo;Upline&raquo;</a>
+                </li>
+                <li class="nav__item">
+                  <button class="nav__link" id="productBtn">О продукте &laquo;Upline&raquo;</button>
                   <!-- <span><img class="nav__angle" src="img/Main/angle.svg" alt=""></span> -->
-                </div>
-                <div class="nav__item">
+                </li>
+                <li class="nav__item">
                   <a class="nav__link" href="#">О компании</a>
-                </div>
-                <div class="nav__item">
+                </li>
+                <li class="nav__item">
                   <a class="nav__link" href="#">Контакты</a>
-                </div>
-              </div>
+                </li>
+              </ul>
             </div>
           </nav>
 
@@ -279,12 +280,183 @@
               </h2>
               <p class="offer__text">Минимизируйте риски торговли</p>
             </div>
-            <form class="offer__form" action="" method="POST">
-              <input class="offer__form-input" type="text" placeholder="Ваше имя">
-              <input class="offer__form-input" type="tel" placeholder="Ваш телефон">
-              <input class="offer__form-input" type="email" placeholder="Ваш E-mail">
-              <button class="btn btn--offer">Запросить доступ</button>
+            <form class="offer__form" action="javascript:void(0)" method="POST">
+              <label class="offer__form-label" for="name">
+                <input class="offer__form-input" id="name" type="text" name="name" required placeholder="Ваше имя">
+              </label>
+
+              <label class="offer__form-label" for="tel">
+                <input class="offer__form-input" id="tel" type="tel" name="tel" required placeholder="Ваш телефон">
+              </label>
+
+              <label class="offer__form-label" for="mail">
+                <input class="offer__form-input" id="mail" type="email" name="mail" required placeholder="Ваш E-mail" />
+              </label>
+
+              <button class="btn btn--offer" type="submit">Запросить доступ</button>
             </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="team">
+        <div class="container-fluid">
+          <div class="team__inner">
+            <div class="team__content">
+              <h2 class="team__title">Наша <span class="text--color">команда</span></h2>
+              <p class="team__text">
+                Команда наших специалистов состоит из опытных профессионалов, которые посвящают свою жизнь инновациям и
+                постоянному совершенствованию. Мы стремимся к постоянному развитию и готовы брать на себя отвагу, чтобы
+                двигать финансовую индустрию вперед.
+              </p>
+            </div>
+
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img class="swiper-slide__img" src="img/Team/team1.png" alt="">
+                  <div class="swiper-slide__body">
+                    <span class="team__slider-suptitle">Руководитель</span>
+                    <span class="team__slider-name">Афанасьев Борис</span>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="swiper-slide__img" src="img/Team/team2.png" alt="">
+                  <div class="swiper-slide__body">
+                    <span class="team__slider-suptitle">Ведущий разработчик</span>
+                    <span class="team__slider-name">Афанасьев Борис</span>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="swiper-slide__img" src="img/Team/team3.png" alt="">
+                  <div class="swiper-slide__body">
+                    <span class="team__slider-suptitle">Разработчик</span>
+                    <span class="team__slider-name">Афанасьев Борис</span>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="swiper-slide__img" src="img/Team/team4.png" alt="">
+                  <div class="swiper-slide__body">
+                    <span class="team__slider-suptitle">Старший менеджер</span>
+                    <span class="team__slider-name">Афанасьев Борис</span>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="swiper-slide__img" src="img/Team/team5.png" alt="">
+                  <div class="swiper-slide__body">
+                    <span class="team__slider-suptitle">Менеджер продаж</span>
+                    <span class="team__slider-name">Афанасьев Борис</span>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="swiper-slide__img" src="img/Team/team1.png" alt="">
+                  <div class="swiper-slide__body">
+                    <span class="team__slider-suptitle">Руководитель</span>
+                    <span class="team__slider-name">Афанасьев Борис</span>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="swiper-slide__img" src="img/Team/team2.png" alt="">
+                  <div class="swiper-slide__body">
+                    <span class="team__slider-suptitle">Ведущий разработчик</span>
+                    <span class="team__slider-name">Афанасьев Борис</span>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="swiper-slide__img" src="img/Team/team3.png" alt="">
+                  <div class="swiper-slide__body">
+                    <span class="team__slider-suptitle">Разработчик</span>
+                    <span class="team__slider-name">Афанасьев Борис</span>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="swiper-slide__img" src="img/Team/team4.png" alt="">
+                  <div class="swiper-slide__body">
+                    <span class="team__slider-suptitle">Старший менеджер</span>
+                    <span class="team__slider-name">Афанасьев Борис</span>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img class="swiper-slide__img" src="img/Team/team5.png" alt="">
+                  <div class="swiper-slide__body">
+                    <span class="team__slider-suptitle">Менеджер продаж</span>
+                    <span class="team__slider-name">Афанасьев Борис</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq">
+        <div class="container">
+          <div class="faq__inner">
+
+            <div class="faq__content">
+              <h2 class="faq__title">Детальные <span class="text--color">ответы IT-разработчиков о системе</span></h2>
+              <p class="faq__text">Собрали сильную команду продвинутых специалистов в сфере IT-технологий, привлекли
+                финансовых экспертов и практикующих трейдеров для цифровизации авторских стратегий торговли. </p>
+              <button class="btn btn--faq">Задать другой вопрос</button>
+            </div>
+
+            <div class="faq__accordion">
+              <section class="accordion__section">
+                <input type="checkbox" class="accordion__checkbox" id="accordion-heading-1">
+                <label class="accordion__heading" for="accordion-heading-1">Какой средний доход пользователей?</label>
+                <div class="accordion__content">
+                  <p class="accordion__text">Ежемесячная доходность торговли на рекомендованных настройках составляет
+                    20%, при высокой
+                    волатильности рынка показатель достигает 45%.</p>
+                </div>
+              </section>
+
+              <section class="accordion__section">
+                <input type="checkbox" class="accordion__checkbox" id="accordion-heading-2">
+                <label class="accordion__heading" for="accordion-heading-2">Окупится ли пользование роботом?</label>
+                <div class="accordion__content">
+                  <p class="accordion__text">Ежемесячная доходность торговли на рекомендованных настройках составляет
+                    20%, при высокой
+                    волатильности рынка показатель достигает 45%.</p>
+                </div>
+              </section>
+
+              <section class="accordion__section">
+                <input type="checkbox" class="accordion__checkbox" id="accordion-heading-3">
+                <label class="accordion__heading" for="accordion-heading-3">Что делать, если не смогу разобраться с
+                  функционалом?</label>
+                <div class="accordion__content">
+                  <p class="accordion__text">Ежемесячная доходность торговли на рекомендованных настройках составляет
+                    20%, при высокой
+                    волатильности рынка показатель достигает 45%.</p>
+                </div>
+              </section>
+
+              <section class="accordion__section">
+                <input type="checkbox" class="accordion__checkbox" id="accordion-heading-4">
+                <label class="accordion__heading" for="accordion-heading-4">Чем полезен бот для самостоятельной торговли
+                  трейдера?</label>
+                <div class="accordion__content">
+                  <p class="accordion__text">Ежемесячная доходность торговли на рекомендованных настройках составляет
+                    20%, при высокой
+                    волатильности рынка показатель достигает 45%.</p>
+                </div>
+              </section>
+
+              <section class="accordion__section">
+                <input type="checkbox" class="accordion__checkbox" id="accordion-heading-5">
+                <label class="accordion__heading" for="accordion-heading-5">Что делать, если не понравится
+                  система?</label>
+                <div class="accordion__content">
+                  <p class="accordion__text">Ежемесячная доходность торговли на рекомендованных настройках составляет
+                    20%, при высокой
+                    волатильности рынка показатель достигает 45%.</p>
+                </div>
+              </section>
+            </div>
+
           </div>
         </div>
       </div>
@@ -385,6 +557,9 @@
       </div>
     </footer>
   </div>
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="js/app.js"></script>
 </body>
 
 </html>
