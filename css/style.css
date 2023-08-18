@@ -79,6 +79,8 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  min-height: 100%;
+  overflow: hidden;
 }
 
 .container {
@@ -86,6 +88,7 @@ body {
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
+  position: relative;
 }
 
 .container-fluid {
@@ -110,14 +113,10 @@ body {
   color: var(--bg);
   -webkit-box-shadow: 0px 10px 40px -16px rgba(var(--main), 0.60);
   box-shadow: 0px 10px 40px -16px rgba(var(--main), 0.60);
-
   font-size: 17px;
   font-weight: 600;
-
   width: -webkit-fit-content;
-
   width: -moz-fit-content;
-
   width: fit-content;
   -webkit-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
@@ -128,9 +127,91 @@ body {
   background: var(--main-hover);
 }
 
+/* Background Ellipse */
+.bg-ellipse-1 {
+  position: absolute;
+  top: 223px;
+  left: 53px;
+  width: 92.5%;
+  height: 248.618px;
+  transform: rotate(-35.86deg);
+
+  border-radius: 1221.094px;
+  opacity: 0.1;
+  background: var(--main);
+  filter: blur(100px);
+}
+
+.bg-ellipse-2 {
+  position: absolute;
+  top: 192px;
+  right: -85px;
+  width: 693.826px;
+  height: 693.826px;
+  transform: rotate(-22.881deg);
+  border-radius: 693.826px;
+  opacity: 0.07;
+  background: var(--main);
+  filter: blur(100px);
+}
+
+.bg-ellipse-3 {
+  position: absolute;
+  top: -125px;
+  left: -358px;
+  width: 607.821px;
+  height: 607.821px;
+  transform: rotate(-22.881deg);
+  flex-shrink: 0;
+  border-radius: 607.821px;
+  opacity: 0.07;
+  background: var(--main);
+  filter: blur(200px);
+}
+
+.bg-ellipse-4 {
+  position: absolute;
+  top: -224px;
+  right: 114px;
+  width: 538.605px;
+  height: 538.605px;
+  transform: rotate(-22.881deg);
+  flex-shrink: 0;
+  border-radius: 538.605px;
+  opacity: 0.04;
+  background: var(--main);
+  filter: blur(100px);
+}
+
+.bg-circle-1 {
+  position: absolute;
+  top: 328px;
+  right: 329px;
+  width: 243.972px;
+  height: 243.972px;
+  transform: rotate(22deg);
+  border: 1px solid rgba(255, 255, 255, 0.50);
+  border-radius: 50%;
+  opacity: 0.3;
+}
+
+.bg-circle-2 {
+  position: absolute;
+  top: 364px;
+  right: 390px;
+  width: 182.979px;
+  height: 182.979px;
+  transform: rotate(22deg);
+  border: 1px solid rgba(255, 255, 255, 0.50);
+  border-radius: 50%;
+  opacity: 0.3;
+}
+
 /* Header */
 .header {
   background: var(--bg);
+  position: relative;
+  z-index: 10;
 }
 
 .header__inner {
@@ -145,12 +226,8 @@ body {
 }
 
 .logo {
-  max-width: 130px;
+  width: 130px;
   height: 34px;
-}
-
-.logo__img {
-  width: 100%;
 }
 
 .nav {
