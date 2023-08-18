@@ -143,13 +143,12 @@
       <div class="hero">
         <div class="container">
 
-          <div class="bg-ellipse-1"></div>
-          <div class="bg-ellipse-2"></div>
-          <div class="bg-ellipse-3"></div>
-          <div class="bg-ellipse-4"></div>
-
-          <div class="bg-circle-1"></div>
-          <div class="bg-circle-2"></div>
+          <div class="glow glow--1"></div>
+          <div class="glow glow--2"></div>
+          <div class="glow glow--3"></div>
+          <div class="glow glow--4"></div>
+          <div class="circle circle--1"></div>
+          <div class="circle circle--2"></div>
 
           <div class="hero__inner">
 
@@ -229,7 +228,9 @@
               <p class="capital__text">Воспользуйтесь бесплатной пробной версией Upline на 14 дней для тестирования
                 возможностей робота. Гарантируем возврат средств в течение 1 месяца в случае сбоев системы.</p>
             </div>
-            <img class="capital__image" src="img/Main/shield.png" alt="">
+            <div class="capital__image">
+              <img src="img/Main/shield.png" alt="">
+            </div>
           </div>
         </div>
       </div>
@@ -237,7 +238,9 @@
       <div class="trade">
         <div class="container">
           <div class="trade__inner">
-            <img class="trade__image" src="img/Main/cup.png" alt="">
+            <div class="trade__image">
+              <img src="img/Main/cup.png" alt="">
+            </div>
             <div class="trade__content">
               <h2 class="trade__title">
                 Зарабатывайте на трейдинге без нервов <span class="text--color">с минимумом участия</span>
@@ -263,14 +266,18 @@
 
             <div class="profit__items">
               <div class="profit__item">
-                <img class="profit__item-image" src="img/Main/cup-2.png" alt="">
+                <picture class="profit__item-picture">
+                  <img class="profit__item-image" src="img/Main/cup-2.png" alt="">
+                </picture>
                 <h3 class="profit__item-title">Прогрессивный <span class="text--color">функционал</span></h3>
                 <p class="profit__item-text">Регулярно дорабатываем функционал и внедряем прогрессивные IT-решения для
                   повышения эффективности бота. Наша миссия — занять лидирующую позицию на рынке и обеспечить
                   пользователям высокую доходность.</p>
               </div>
               <div class="profit__item">
-                <img class="profit__item-image" src="img/Main/badge.png" alt="">
+                <picture class="profit__item-picture">
+                  <img class="profit__item-image" src="img/Main/badge.png" alt="">
+                </picture>
                 <h3 class="profit__item-title">Прогрессивный <span class="text--color">функционал</span></h3>
                 <p class="profit__item-text">Ведем разработки при поддержке «Университета Иннополиса» и планируем
                   интеграцию искусственного интеллекта для более глубокого анализа движения валют и рационализации
@@ -403,69 +410,64 @@
       <div class="faq">
         <div class="container">
           <div class="faq__inner">
-
             <div class="faq__content">
               <h2 class="faq__title">Детальные <span class="text--color">ответы IT-разработчиков о системе</span></h2>
               <p class="faq__text">Собрали сильную команду продвинутых специалистов в сфере IT-технологий, привлекли
                 финансовых экспертов и практикующих трейдеров для цифровизации авторских стратегий торговли. </p>
               <button class="btn btn--faq">Задать другой вопрос</button>
             </div>
-
-            <div class="faq__accordion">
-              <section class="accordion__section">
-                <input type="checkbox" class="accordion__checkbox" id="accordion-heading-1">
-                <label class="accordion__heading" for="accordion-heading-1">Какой средний доход пользователей?</label>
-                <div class="accordion__content">
-                  <p class="accordion__text">Ежемесячная доходность торговли на рекомендованных настройках составляет
+            <ul class="accordion__list">
+              <li class="accordion__item">
+                <h3 class="accordion__title">Какой средний доход пользователей?</h3>
+                <div class="accordion__body">
+                  <p class="accordion__text">
+                    Ежемесячная доходность торговли на рекомендованных настройках составляет
                     20%, при высокой
-                    волатильности рынка показатель достигает 45%.</p>
+                    волатильности рынка показатель достигает 45%.
+                  </p>
                 </div>
-              </section>
-
-              <section class="accordion__section">
-                <input type="checkbox" class="accordion__checkbox" id="accordion-heading-2">
-                <label class="accordion__heading" for="accordion-heading-2">Окупится ли пользование роботом?</label>
-                <div class="accordion__content">
-                  <p class="accordion__text">Ежемесячная доходность торговли на рекомендованных настройках составляет
+              </li>
+              <li class="accordion__item">
+                <h3 class="accordion__title">Окупится ли пользование роботом?</h3>
+                <div class="accordion__body">
+                  <p class="accordion__text">
+                    Ежемесячная доходность торговли на рекомендованных настройках составляет
                     20%, при высокой
-                    волатильности рынка показатель достигает 45%.</p>
+                    волатильности рынка показатель достигает 45%.
+                  </p>
                 </div>
-              </section>
-
-              <section class="accordion__section">
-                <input type="checkbox" class="accordion__checkbox" id="accordion-heading-3">
-                <label class="accordion__heading" for="accordion-heading-3">Что делать, если не смогу разобраться с
-                  функционалом?</label>
-                <div class="accordion__content">
-                  <p class="accordion__text">Ежемесячная доходность торговли на рекомендованных настройках составляет
+              </li>
+              <li class="accordion__item">
+                <h3 class="accordion__title">Что делать, если не смогу разобраться с функционалом?</h3>
+                <div class="accordion__body">
+                  <p class="accordion__text">
+                    Ежемесячная доходность торговли на рекомендованных настройках составляет
                     20%, при высокой
-                    волатильности рынка показатель достигает 45%.</p>
+                    волатильности рынка показатель достигает 45%.
+                  </p>
                 </div>
-              </section>
-
-              <section class="accordion__section">
-                <input type="checkbox" class="accordion__checkbox" id="accordion-heading-4">
-                <label class="accordion__heading" for="accordion-heading-4">Чем полезен бот для самостоятельной торговли
-                  трейдера?</label>
-                <div class="accordion__content">
-                  <p class="accordion__text">Ежемесячная доходность торговли на рекомендованных настройках составляет
+              </li>
+              <li class="accordion__item">
+                <h3 class="accordion__title">Чем полезен бот для самостоятельной торговли трейдера?</h3>
+                <div class="accordion__body">
+                  <p class="accordion__text">
+                    Ежемесячная доходность торговли на рекомендованных настройках составляет
                     20%, при высокой
-                    волатильности рынка показатель достигает 45%.</p>
+                    волатильности рынка показатель достигает 45%.
+                  </p>
                 </div>
-              </section>
-
-              <section class="accordion__section">
-                <input type="checkbox" class="accordion__checkbox" id="accordion-heading-5">
-                <label class="accordion__heading" for="accordion-heading-5">Что делать, если не понравится
-                  система?</label>
-                <div class="accordion__content">
-                  <p class="accordion__text">Ежемесячная доходность торговли на рекомендованных настройках составляет
+              </li>
+              <li class="accordion__item">
+                <h3 class="accordion__title">Что делать, если не понравится система?</h3>
+                <div class="accordion__body">
+                  <p class="accordion__text">
+                    Ежемесячная доходность торговли на рекомендованных настройках составляет
                     20%, при высокой
-                    волатильности рынка показатель достигает 45%.</p>
+                    волатильности рынка показатель достигает 45%.
+                  </p>
                 </div>
-              </section>
-            </div>
-
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -483,26 +485,24 @@
 
             <nav class="nav">
               <div class="nav__inner">
-                <div class="nav__list">
-                  <div class="nav__item">
-                    <a class="nav__link" href="#">Главная
+                <ul class="nav__list">
+                  <li class="nav__item">
+                    <button class="nav__link" id="mainBtn">Главная
                       <svg class="nav__angle">
                         <use href="sprite.svg#angle"></use>
                       </svg>
-                    </a>
-                    <!-- <span><img class="nav__angle" src="img/Main/angle.svg" alt=""></span> -->
-                  </div>
-                  <div class="nav__item">
-                    <a class="nav__link" href="#">О продукте &laquo;Upline&raquo;</a>
-                    <!-- <span><img class="nav__angle" src="img/Main/angle.svg" alt=""></span> -->
-                  </div>
-                  <div class="nav__item">
+                    </button>
+                  </li>
+                  <li class="nav__item">
+                    <button class="nav__link">О продукте &laquo;Upline&raquo;</button>
+                  </li>
+                  <li class="nav__item">
                     <a class="nav__link" href="#">О компании</a>
-                  </div>
-                  <div class="nav__item">
+                  </li>
+                  <li class="nav__item">
                     <a class="nav__link" href="#">Контакты</a>
-                  </div>
-                </div>
+                  </li>
+                </ul>
               </div>
             </nav>
 

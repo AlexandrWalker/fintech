@@ -1,0 +1,23 @@
+.privacy-policy {
+  padding-top: 50px;
+}
+
+.privacy-policy__inner {
+  max-width: 984px;
+  margin-top: 50px;
+}
+
+.privacy-policy__title {
+  color: var(--white);
+  font-size: 47px;
+  font-weight: 600;
+  line-height: 160%;
+  margin-bottom: 50px;
+}
+
+.privacy-policy__text {
+  color: var(--white);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 170%;
+}

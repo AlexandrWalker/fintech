@@ -24,4 +24,17 @@ mainBtn.addEventListener('click', function () {
   mainToggle.classList.toggle("show");
 });
 
+/* Accordion */
+var accordionItem = document.querySelectorAll('.accordion__title'),
+  active = document.getElementsByClassName('accordion__active');
+
+Array.from(accordionItem).forEach(function (item, i, accordionItem) {
+  item.addEventListener('click', function (e) {
+    if (active.length > 0 && active[0] !== this)
+      active[0].classList.remove('accordion__active');
+
+    this.classList.toggle('accordion__active');
+  });
+});
+
 /* Валидация формы */
