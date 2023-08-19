@@ -2,14 +2,32 @@
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 4,
   spaceBetween: 24,
-  loop: true,
   centeredSlides: false,
-  grabCursor: true,
-  freeMode: true,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
+});
+
+var swiper = new Swiper(".tarif-slider", {
+  slidesPerView: 3,
+  spaceBetween: 24,
+  autoHeight: true,
+  spaceBetween: 20,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+
+var swiper = new Swiper(".cases-slider", {
+  slidesPerView: 1,
+  spaceBetween: 24,
+  centeredSlides: true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -38,3 +56,72 @@ Array.from(accordionItem).forEach(function (item, i, accordionItem) {
 });
 
 /* Валидация формы */
+console.log('Init!');
+// inputmask
+const form = document.querySelector('.form');
+const telSelector = form.querySelector('input[type="tel"]');
+const inputMask = new Inputmask('+7 (999) 999-99-99');
+inputMask.mask(telSelector);
+
+const validation = new JustValidate('.form');
+
+validation
+  .addField('.input-name', [
+    {
+      rule: 'required',
+      value: true,
+      errorMessage: ' '
+    }
+  ])
+  .addField('.input-mail', [
+    {
+      rule: 'required',
+      value: true,
+      errorMessage: ' ',
+      // errorMessage: 'Email обязателен',
+    },
+    {
+      rule: 'email',
+      value: true,
+      errorMessage: ' ',
+      // errorMessage: 'Введите корректный Email',
+    },
+  ])
+  .addField('.input-tel', [
+    {
+      rule: 'required',
+      value: true,
+      errorMessage: ' ',
+      // errorMessage: 'Телефон обязателен',
+    },
+    {
+      rule: 'function',
+      validator: function () {
+        const phone = telSelector.inputmask.unmaskedvalue();
+        return phone.length === 10;
+      },
+      errorMessage: ' ',
+      // errorMessage: 'Введите корректный телефон',
+    },
+  ]).onSuccess((event) => {
+    console.log('Validation passes and form submitted', event);
+
+    let formData = new FormData(event.target);
+
+    console.log(...formData);
+
+    let xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          console.log('Отправлено');
+        }
+      }
+    }
+
+    xhr.open('POST', 'mail.php', true);
+    xhr.send(formData);
+
+    event.target.reset();
+  });

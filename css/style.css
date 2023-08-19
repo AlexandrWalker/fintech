@@ -13,6 +13,7 @@
   --main: #FCD535;
   --main-hover: #D9AD36;
 
+  --grad: linear-gradient(#6B200F 0%, #CA573E 29.17%, #E2A938 76.56%, #3A2824 100%);
   --swiper-navigation-size: 11px;
 }
 
@@ -52,6 +53,10 @@ button {
 input:focus,
 input:focus-visible {
   outline: none;
+}
+
+input:-internal-autofill-selected {
+  background-color: unset !important;
 }
 
 body {
@@ -144,7 +149,7 @@ body {
 
 /* Breadcrumbs */
 .breadcrumbs {
-  margin-bottom: 20px;
+  margin: 50px 0 20px;
 }
 
 .breadcrumbs__list {
@@ -321,6 +326,7 @@ body {
 /* Hero */
 .hero {
   background: var(--black);
+  margin-bottom: 150px;
 }
 
 .hero .glow--1 {
@@ -462,7 +468,7 @@ body {
 
 /* Product */
 .product {
-  margin-top: 150px;
+  margin-bottom: 150px;
 }
 
 .product__inner {
@@ -505,7 +511,7 @@ body {
 
 /* Capital */
 .capital {
-  margin-top: 150px;
+  margin-bottom: 150px;
 }
 
 .capital__inner {
@@ -614,7 +620,7 @@ body {
 
 /* Trade */
 .trade {
-  margin-top: 150px;
+  margin-bottom: 150px;
 }
 
 .trade__inner {
@@ -700,7 +706,7 @@ body {
 
 /* Profit */
 .profit-2 {
-  margin-top: 150px;
+  margin-bottom: 150px;
 }
 
 .profit-2__inner {
@@ -815,7 +821,7 @@ body {
 
 /* Offer */
 .offer {
-  margin-top: 150px;
+  margin-bottom: 150px;
 }
 
 .offer__inner {
@@ -893,8 +899,15 @@ body {
   appearance: none;
 }
 
+.offer__form-input.just-validate-error-field {
+  background-image: url(../img/error-star.svg);
+  background-repeat: no-repeat;
+  background-size: 7px;
+  background-position: 90% 50%;
+}
+
 /* Это стили для не валидных полей */
-input:invalid {
+/* input:invalid {
   border-color: #900;
 }
 
@@ -906,7 +919,7 @@ input:-webkit-autofill,
 input:-webkit-autofill:focus {
   -webkit-transition: background-color 0s 600000s, color 0s 600000s;
   transition: background-color 0s 600000s, color 0s 600000s;
-}
+} */
 
 .btn--offer {
   width: calc(25% - 18px);
@@ -918,7 +931,7 @@ input:-webkit-autofill:focus {
 
 /* Team */
 .team {
-  padding-top: 150px;
+  margin-bottom: 150px;
 }
 
 .team__inner {
@@ -1054,7 +1067,7 @@ input:-webkit-autofill:focus {
 
 /* FAQ */
 .faq {
-  padding-top: 150px;
+  margin-bottom: 150px;
 }
 
 .faq__inner {
@@ -1182,7 +1195,6 @@ input:-webkit-autofill:focus {
 
 /* Footer */
 .footer {
-  margin-top: 150px;
   background: var(--black);
 }
 
@@ -1248,17 +1260,16 @@ input:-webkit-autofill:focus {
 }
 
 .social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 5px;
   border-radius: 4px;
   background: var(--bg-light);
   width: 34px;
   height: 34px;
-}
-
-.social-icon {
-  width: 24px;
-  height: 24px;
-  fill: var(--txt-3);
+  font-size: 24px;
+  color: var(--txt-3);
 }
 
 .copyright {
@@ -1278,7 +1289,7 @@ input:-webkit-autofill:focus {
   line-height: 170%;
 }
 
-.copyright__link {
+.privacy-policy__link {
   color: var(--txt-3);
   font-size: 13px;
   font-weight: 400;
@@ -1287,7 +1298,8 @@ input:-webkit-autofill:focus {
   margin-left: 5px;
 }
 
-.footer__icon {
-  width: 52px;
-  height: 11px;
+.copyright__link {
+  color: var(--txt-3);
+  font-size: 10px;
+  margin-left: 5px;
 }

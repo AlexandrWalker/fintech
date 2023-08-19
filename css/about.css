@@ -1,5 +1,5 @@
 .about {
-  padding-top: 50px;
+  margin-bottom: 50px;
 }
 
 .about__title {
@@ -7,10 +7,11 @@
   font-size: 47px;
   font-weight: 600;
   line-height: 160%;
-  margin-bottom: 50px;
 }
 
-.about-us {}
+.about-us {
+  margin-bottom: 150px;
+}
 
 .about-us__inner {
   display: flex;
@@ -47,7 +48,7 @@
 
 /* Our */
 .our {
-  margin-top: 150px;
+  margin-bottom: 150px;
 }
 
 .our__inner {
@@ -79,11 +80,11 @@
 
 /* About__stat */
 .about__stat {
-  margin-top: 150px;
+  margin-bottom: 150px;
 }
 
 .team {
-  margin-top: 150px;
+  margin-bottom: 150px;
 }
 
 .team__list {
