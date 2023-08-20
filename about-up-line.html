@@ -7,10 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="img/png" sizes="32x32" href="img/favicon.png">
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="fonts/Inter/stylesheet.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/icons.css">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/about-up-line.css">
   <title>FINTECH</title>
 </head>
 
@@ -21,49 +21,69 @@
     <header class="header">
       <div class="container">
         <div class="header__inner">
+          <button class="burger" id="burgerBtn">
+            <span class="burger__item">Menu</span>
+          </button>
 
-          <a href="#" class="logo">
-            <img alt="" loading="lazy" src="img/logo.svg">
+          <a href="/index.html" class="logo">
+            <img data-src="img/logo.svg" alt="" loading="lazy" src="img/logo.svg" class="logo__img lazyload">
           </a>
 
-          <nav class="nav">
+          <nav class="nav" id="nav">
             <div class="nav__inner">
               <ul class="nav__list">
                 <li class="nav__item">
-                  <button class="nav__link" id="mainBtn">Главная
-                    <svg class="nav__angle">
-                      <use href="sprite.svg#angle"></use>
-                    </svg>
-                  </button>
-                  <!-- <span><img class="nav__angle" src="img/Main/angle.svg" alt=""></span> -->
-                  <ul class="nav__dropdown" id="mainToggle">
-                    <li class="nav__dropdown-item"><a href="nav__dropdown-link">Наш продукт</a></li>
-                    <li class="nav__dropdown-item"><a href="nav__dropdown-link">Защита</a></li>
-                    <li class="nav__dropdown-item"><a href="nav__dropdown-link">Заработок</a></li>
-                    <li class="nav__dropdown-item"><a href="nav__dropdown-link">Результаты</a></li>
-                  </ul>
+                  <button class="nav__link icon-angle_solid">Главная</button>
+                  <div class="nav__dropdown">
+                    <ul class="nav__dropdown-list">
+                      <li class="nav__dropdown-item"><a class="nav__dropdown-link" href="#">Наш продукт</a></li>
+                      <li class="nav__dropdown-item"><a class="nav__dropdown-link" href="#">Защита</a></li>
+                      <li class="nav__dropdown-item"><a class="nav__dropdown-link" href="#">Заработок</a></li>
+                      <li class="nav__dropdown-item"><a class="nav__dropdown-link" href="#">Результаты</a></li>
+                    </ul>
+                  </div>
                 </li>
                 <li class="nav__item">
-                  <button class="nav__link" id="productBtn">О продукте &laquo;Upline&raquo;</button>
-                  <!-- <span><img class="nav__angle" src="img/Main/angle.svg" alt=""></span> -->
+                  <button class="nav__link icon-angle_solid">О продукте &laquo;Upline&raquo;</button>
+                  <div class="nav__dropdown">
+                    <ul class="nav__dropdown-list">
+                      <li class="nav__dropdown-item"><a class="nav__dropdown-link" href="about-up-line.html">Наш
+                          продукт</a></li>
+                      <li class="nav__dropdown-item"><a class="nav__dropdown-link" href="privacy-policy.html">Защита</a>
+                      </li>
+                      <li class="nav__dropdown-item"><a class="nav__dropdown-link" href="404.html">404</a></li>
+                    </ul>
+                  </div>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">О компании</a>
+                  <a class="nav__link" href="about.html">О компании</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Контакты</a>
+                  <a class="nav__link" href="contact.html">Контакты</a>
                 </li>
               </ul>
             </div>
+
+            <div class="mobileMenu__contacts">
+              <a class="phone" href="tel:+70000000000">+7 (000) 000-00-00</a>
+
+              <div class="social">
+                <a class="social-link icon-vk" href="#"></a>
+                <a class="social-link icon-yb" href="#"></a>
+                <a class="social-link icon-viber" href="#"></a>
+                <a class="social-link icon-whatsapp" href="#"></a>
+                <a class="social-link icon-telegram" href="#"></a>
+                <a class="social-link icon-gmail" href="#"></a>
+              </div>
+            </div>
           </nav>
 
-          <a class="phone" href="tel:70000000000">+7 (000) 000-00-00</a>
-
-          <button class="btn btn--header" type="button">
-            <!-- <img src="img/Main/phone.svg" alt=""> -->
-            Заказать звонок
-          </button>
-
+          <div class="header__contacts">
+            <a class="phone" href="tel:70000000000">+7 (000) 000-00-00</a>
+            <button class="btn btn--header icon-phone" type="button">
+              <span class="btn--text">Заказать звонок</span>
+            </button>
+          </div>
         </div>
       </div>
     </header>
@@ -92,24 +112,29 @@
               </div>
               <button class="btn">Попробовать бесплатно</button>
             </div>
-            <img src="img/About Up-line/about.png" alt="" class="upline-hero__image">
+            <img data-src="img/main/product-1x.png" srcset="img/main/product-1x.png 1x, img/main/product-2x.png 2x"
+              alt="" loading="lazy" src="img/main/product-1x.png" class="upline-hero__image lazyload">
           </div>
 
           <div class="upline-hero__items">
             <div class="upline-hero__item">
-              <img class="upline-hero__item-image" src="img/About Up-line/analis.svg">
+              <img data-src="img/upline/analis.svg" src="img/upline/analis.svg" alt="" loading="lazy"
+                class="upline-hero__item-image lazyload">
               <span class="upline-hero__item-text">Сверхточный анализ рынка</span>
             </div>
             <div class="upline-hero__item">
-              <img class="upline-hero__item-image" src="img/About Up-line/nft-signal.svg">
+              <img data-src="img/upline/nft-signal.svg" src="img/upline/nft-signal.svg" alt="" loading="lazy"
+                class="upline-hero__item-image lazyload">
               <span class="upline-hero__item-text">Мгновенная реакция на сигналы</span>
             </div>
             <div class="upline-hero__item">
-              <img class="upline-hero__item-image" src="img/About Up-line/sort.svg">
+              <img data-src="img/upline/sort.svg" src="img/upline/sort.svg" alt="" loading="lazy"
+                class="upline-hero__item-image lazyload">
               <span class="upline-hero__item-text">Возможность ручных настроек</span>
             </div>
             <div class="upline-hero__item">
-              <img class="upline-hero__item-image" src="img/About Up-line/hearpods.svg">
+              <img data-src="img/upline/hearpods.svg" src="img/upline/hearpods.svg" alt="" loading="lazy"
+                class="upline-hero__item-image lazyload">
               <span class="upline-hero__item-text">Техническая поддержка 24/7</span>
             </div>
           </div>
@@ -120,7 +145,9 @@
       <div class="avto">
         <div class="container">
           <div class="avto__inner">
-            <img class="avto__image" src="img/About Up-line/Asset Generated.png" alt="">
+            <img data-src="img/upline/asset-generated-1x.png"
+              srcset="img/upline/asset-generated-1x.png 1x, img/upline/asset-generated-2x.png 2x" alt="" loading="lazy"
+              src="img/upline/asset-generated-1x.png" class="avto__image lazyload">
             <div class="avto__body">
               <div class="avto__content">
                 <h2 class="avto__title">Автоматизация торговли — первый шаг к <span class="text--color">финансовой
@@ -161,26 +188,32 @@
             <div class="profit__features">
               <div class="profit__features-items">
                 <div class="profit__features-item">
-                  <img class="profit__features-image" src="img/About Up-line/phone-screen.svg" alt="">
+                  <img data-src="img/upline/phone-screen.svg" src="img/upline/phone-screen.svg" alt="" loading="lazy"
+                    class="profit__features-image lazyload">
                   <p class="profit__features-text">Приложение для мониторинга счетов.</p>
                 </div>
                 <div class="profit__features-item">
-                  <img class="profit__features-image" src="img/About Up-line/phone-screen.svg" alt="">
-                  <p class="profit__features-text">Приложение для мониторинга счетов.</p>
+                  <img data-src="img/upline/card.svg" src="img/upline/card.svg" alt="" loading="lazy"
+                    class="profit__features-image lazyload">
+                  <p class="profit__features-text">Возможность торговли с кредитным плечом 1:2000.</p>
                 </div>
                 <div class="profit__features-item">
-                  <img class="profit__features-image" src="img/About Up-line/phone-screen.svg" alt="">
-                  <p class="profit__features-text">Приложение для мониторинга счетов.</p>
+                  <img data-src="img/upline/screen-signal.svg" src="img/upline/screen-signal.svg" alt="" loading="lazy"
+                    class="profit__features-image lazyload">
+
+                  <p class="profit__features-text">Удаленный рабочий стол.</p>
                 </div>
               </div>
               <div class="profit__features-items">
                 <div class="profit__features-item">
-                  <img class="profit__features-image" src="img/About Up-line/phone-screen.svg" alt="">
-                  <p class="profit__features-text">Приложение для мониторинга счетов.</p>
+                  <img data-src="img/upline/terminal.svg" src="img/upline/terminal.svg" alt="" loading="lazy"
+                    class="profit__features-image lazyload">
+                  <p class="profit__features-text">Продвинутый торговый терминал на базе MetaTrader4.</p>
                 </div>
                 <div class="profit__features-item">
-                  <img class="profit__features-image" src="img/About Up-line/phone-screen.svg" alt="">
-                  <p class="profit__features-text">Приложение для мониторинга счетов.</p>
+                  <img data-src="img/upline/sort.svg" src="img/upline/sort.svg" alt="" loading="lazy"
+                    class="profit__features-image lazyload">
+                  <p class="profit__features-text">Готовые настройки для быстрого старта торговли через RoboForex.</p>
                 </div>
               </div>
             </div>
@@ -232,7 +265,7 @@
         <div class="container">
           <div class="capital__inner">
             <div class="capital__content">
-              <h2 class="capital__title">
+              <h2 class="title">
                 Ваш капитал под <span class="text--color">надежной IT-защитой</span>
               </h2>
               <p class="capital__text">Торговый помощник с выстроенной системой безопасности обеспечит бесперебойную
@@ -249,7 +282,8 @@
                 возможностей робота. Гарантируем возврат средств в течение 1 месяца в случае сбоев системы.</p>
             </div>
             <div class="capital__image">
-              <img src="img/Main/shield.png" alt="">
+              <img data-src="img/main/shield-1x.png" srcset="img/main/shield-1x.png 1x, img/main/shield-2x.png 2x"
+                alt="" loading="lazy" src="img/main/shield-1x.png" class="lazyload">
             </div>
           </div>
         </div>
@@ -259,10 +293,11 @@
         <div class="container">
           <div class="trade__inner">
             <div class="trade__image">
-              <img src="img/Main/cup.png" alt="">
+              <img data-src="img/main/cup-1x.png" srcset="img/main/cup-1x.png 1x, img/main/cup-2x.png 2x" alt=""
+                loading="lazy" src="img/main/cup-1x.png" class="lazyload">
             </div>
             <div class="trade__content">
-              <h2 class="trade__title">
+              <h2 class="title">
                 Зарабатывайте на трейдинге без нервов <span class="text--color">с минимумом участия</span>
               </h2>
               <p class="trade__text">Автоматизация позволяет оптимизировать 100% торговых процессов: от поиска сигналов
@@ -281,23 +316,25 @@
       <div class="profit-2">
         <div class="container">
           <div class="profit-2__inner">
-            <h2 class="profit-2__title">Бесплатно совершенствуем систему для ваших <span class="text--color">прибыльных
+            <h2 class="title">Бесплатно совершенствуем систему для ваших <span class="text--color">прибыльных
                 результатов</span></h2>
 
             <div class="profit-2__items">
               <div class="profit-2__item">
-                <picture class="profit-2__item-picture">
-                  <img class="profit-2__item-image" src="img/Main/cup-2.png" alt="">
-                </picture>
+                <div class="profit-2__image">
+                  <img data-src="img/main/trophy-1x.png" srcset="img/main/trophy-1x.png 1x, img/main/trophy-2x.png 2x"
+                    alt="" loading="lazy" src="img/main/trophy-1x.png" class="lazyload">
+                </div>
                 <h3 class="profit-2__item-title">Прогрессивный <span class="text--color">функционал</span></h3>
                 <p class="profit-2__item-text">Регулярно дорабатываем функционал и внедряем прогрессивные IT-решения для
                   повышения эффективности бота. Наша миссия — занять лидирующую позицию на рынке и обеспечить
                   пользователям высокую доходность.</p>
               </div>
               <div class="profit-2__item">
-                <picture class="profit-2__item-picture">
-                  <img class="profit-2__item-image" src="img/Main/badge.png" alt="">
-                </picture>
+                <div class="profit-2__image">
+                  <img data-src="img/Main/badge-1x.png" srcset="img/Main/badge-1x.png 1x, img/Main/badge-2x.png 2x"
+                    alt="" loading="lazy" src="img/Main/badge-1x.png" class="lazyload">
+                </div>
                 <h3 class="profit-2__item-title">Прогрессивный <span class="text--color">функционал</span></h3>
                 <p class="profit-2__item-text">Ведем разработки при поддержке «Университета Иннополиса» и планируем
                   интеграцию искусственного интеллекта для более глубокого анализа движения валют и рационализации
@@ -320,7 +357,8 @@
 
             <div class="profit-3__items">
               <div class="profit-3__item">
-                <img class="profit-3__item-image" src="img/About Up-line/server.svg" alt="">
+                <img data-src="img/upline/server.svg" src="img/upline/server.svg" alt="" loading="lazy"
+                  class="profit-3__item-image lazyload">
                 <div class="profit-3__item-content">
                   <h3 class="profit-3__item-title">Без спецзнаний</h3>
                   <p class="profit-3__item-text">Вам не нужно погружаться в тематику и разбираться в тонкостях торговли
@@ -329,7 +367,8 @@
                 </div>
               </div>
               <div class="profit-3__item">
-                <img class="profit-3__item-image" src="img/About Up-line/sort.svg" alt="">
+                <img data-src="img/upline/sort.svg" src="img/upline/sort.svg" alt="" loading="lazy"
+                  class="profit-3__item-image lazyload">
                 <div class="profit-3__item-content">
                   <h3 class="profit-3__item-title">Гибкая система настроек</h3>
                   <p class="profit-3__item-text">Вам не нужно погружаться в тематику и разбираться в тонкостях торговли
@@ -337,7 +376,8 @@
                 </div>
               </div>
               <div class="profit-3__item">
-                <img class="profit-3__item-image" src="img/About Up-line/magnifying-glass-chart.svg" alt="">
+                <img data-src="img/upline/magnifying-glass-chart.svg" src="img/upline/magnifying-glass-chart.svg" alt=""
+                  loading="lazy" class="profit-3__item-image lazyload">
                 <div class="profit-3__item-content">
                   <h3 class="profit-3__item-title">Управление рисками</h3>
                   <p class="profit-3__item-text">Используйте встроенную систему хеджирования позиций для защиты от
@@ -345,7 +385,8 @@
                 </div>
               </div>
               <div class="profit-3__item">
-                <img class="profit-3__item-image" src="img/About Up-line/combi.svg" alt="">
+                <img data-src="img/upline/combi.svg" src="img/upline/combi.svg" alt="" loading="lazy"
+                  class="profit-3__item-image lazyload">
                 <div class="profit-3__item-content">
                   <h3 class="profit-3__item-title">30+ готовых торговых комбинаций</h3>
                   <p class="profit-3__item-text">Проверенные стратегии заработка на короткий срок или длительную
@@ -353,7 +394,8 @@
                 </div>
               </div>
               <div class="profit-3__item">
-                <img class="profit-3__item-image" src="img/About Up-line/hearpods.svg" alt="">
+                <img data-src="img/upline/hearpods.svg" src="img/upline/hearpods.svg" alt="" loading="lazy"
+                  class="profit-3__item-image lazyload">
                 <div class="profit-3__item-content">
                   <h3 class="profit-3__item-title">Telegram-поддержка 24/7</h3>
                   <p class="profit-3__item-text">Задавайте любые вопросы об использовании системы и отслеживайте
@@ -361,7 +403,8 @@
                 </div>
               </div>
               <div class="profit-3__item">
-                <img class="profit-3__item-image" src="img/About Up-line/rabbit-running.svg" alt="">
+                <img data-src="img/upline/rabbit-running.svg" src="img/upline/rabbit-running.svg" alt="" loading="lazy"
+                  class="profit-3__item-image lazyload">
                 <div class="profit-3__item-content">
                   <h3 class="profit-3__item-title">Мгновенные оповещения</h3>
                   <p class="profit-3__item-text">Получайте уведомления о прибыльных сигналах и совершенных сделках через
@@ -377,7 +420,7 @@
         <div class="container">
           <div class="offer__inner">
             <div class="offer__content">
-              <h2 class="offer__title"><span class="text--color">Автоматизируйте</span> сложные трейдинговые процессы
+              <h2 class="title"><span class="text--color">Автоматизируйте</span> сложные трейдинговые процессы
               </h2>
               <p class="offer__text">Минимизируйте риски торговли</p>
             </div>
@@ -398,6 +441,8 @@
               </label>
               <button class="btn btn--offer">Запросить доступ</button>
             </form>
+            <img data-src="img/main/proc-1x.png" srcset="img/main/proc-1x.png 1x, img/main/proc-2x.png 2x" alt=""
+              loading="lazy" src="img/main/proc-1x.png" class="offer__image lazyload">
           </div>
         </div>
       </div>
@@ -461,75 +506,53 @@
               </p>
             </div>
 
-            <div class="swiper mySwiper">
+            <div class="swiper team-slider">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <img class="swiper-slide__img" src="img/Team/team1.png" alt="">
+                  <img data-src="img/team/team1-1x.png" srcset="img/team/team1-1x.png 1x, img/team/team1-2x.png 2x"
+                    alt="" loading="lazy" src="img/team/team1-1x.png" class="swiper-slide__image lazyload">
                   <div class="swiper-slide__body">
                     <span class="team__slider-suptitle">Руководитель</span>
                     <span class="team__slider-name">Афанасьев Борис</span>
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <img class="swiper-slide__img" src="img/Team/team2.png" alt="">
+                  <img data-src="img/team/team2-1x.png" srcset="img/team/team2-1x.png 1x, img/team/team2-2x.png 2x"
+                    alt="" loading="lazy" src="img/team/team2-1x.png" class="swiper-slide__image lazyload">
                   <div class="swiper-slide__body">
                     <span class="team__slider-suptitle">Ведущий разработчик</span>
                     <span class="team__slider-name">Афанасьев Борис</span>
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <img class="swiper-slide__img" src="img/Team/team3.png" alt="">
+                  <img data-src="img/team/team3-1x.png" srcset="img/team/team3-1x.png 1x, img/team/team3-2x.png 2x"
+                    alt="" loading="lazy" src="img/team/team3-1x.png" class="swiper-slide__image lazyload">
                   <div class="swiper-slide__body">
                     <span class="team__slider-suptitle">Разработчик</span>
                     <span class="team__slider-name">Афанасьев Борис</span>
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <img class="swiper-slide__img" src="img/Team/team4.png" alt="">
+                  <img data-src="img/team/team4-1x.png" srcset="img/team/team4-1x.png 1x, img/team/team4-2x.png 2x"
+                    alt="" loading="lazy" src="img/team/team4-1x.png" class="swiper-slide__image lazyload">
                   <div class="swiper-slide__body">
                     <span class="team__slider-suptitle">Старший менеджер</span>
                     <span class="team__slider-name">Афанасьев Борис</span>
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <img class="swiper-slide__img" src="img/Team/team5.png" alt="">
+                  <img data-src="img/team/team5-1x.png" srcset="img/team/team5-1x.png 1x, img/team/team5-2x.png 2x"
+                    alt="" loading="lazy" src="img/team/team5-1x.png" class="swiper-slide__image lazyload">
                   <div class="swiper-slide__body">
                     <span class="team__slider-suptitle">Менеджер продаж</span>
                     <span class="team__slider-name">Афанасьев Борис</span>
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <img class="swiper-slide__img" src="img/Team/team1.png" alt="">
+                  <img data-src="img/team/team1-1x.png" srcset="img/team/team1-1x.png 1x, img/team/team1-2x.png 2x"
+                    alt="" loading="lazy" src="img/team/team-1x.png" class="swiper-slide__image lazyload">
                   <div class="swiper-slide__body">
                     <span class="team__slider-suptitle">Руководитель</span>
-                    <span class="team__slider-name">Афанасьев Борис</span>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <img class="swiper-slide__img" src="img/Team/team2.png" alt="">
-                  <div class="swiper-slide__body">
-                    <span class="team__slider-suptitle">Ведущий разработчик</span>
-                    <span class="team__slider-name">Афанасьев Борис</span>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <img class="swiper-slide__img" src="img/Team/team3.png" alt="">
-                  <div class="swiper-slide__body">
-                    <span class="team__slider-suptitle">Разработчик</span>
-                    <span class="team__slider-name">Афанасьев Борис</span>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <img class="swiper-slide__img" src="img/Team/team4.png" alt="">
-                  <div class="swiper-slide__body">
-                    <span class="team__slider-suptitle">Старший менеджер</span>
-                    <span class="team__slider-name">Афанасьев Борис</span>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <img class="swiper-slide__img" src="img/Team/team5.png" alt="">
-                  <div class="swiper-slide__body">
-                    <span class="team__slider-suptitle">Менеджер продаж</span>
                     <span class="team__slider-name">Афанасьев Борис</span>
                   </div>
                 </div>
@@ -1135,35 +1158,31 @@
         <div class="footer__inner">
 
           <div class="footer__content">
-            <div class="logo">
-              <img src="img/logo.svg" alt="">
-            </div>
+            <a href="/index.html" class="logo">
+              <img data-src="img/logo.svg" alt="" loading="lazy" src="img/logo.svg" class="logo__img lazyload">
+            </a>
 
             <nav class="nav">
               <div class="nav__inner">
                 <ul class="nav__list">
                   <li class="nav__item">
-                    <button class="nav__link" id="mainBtn">Главная
-                      <svg class="nav__angle">
-                        <use href="sprite.svg#angle"></use>
-                      </svg>
-                    </button>
+                    <a class="nav__link" href="index.html">Главная</a>
                   </li>
                   <li class="nav__item">
-                    <button class="nav__link">О продукте &laquo;Upline&raquo;</button>
+                    <a class="nav__link" href="about-up-line.html">О продукте &laquo;Upline&raquo;</a>
                   </li>
                   <li class="nav__item">
-                    <a class="nav__link" href="#">О компании</a>
+                    <a class="nav__link" href="about.html">О компании</a>
                   </li>
                   <li class="nav__item">
-                    <a class="nav__link" href="#">Контакты</a>
+                    <a class="nav__link" href="contact.html">Контакты</a>
                   </li>
                 </ul>
               </div>
             </nav>
 
             <div class="footer__contacts">
-              <a class="phone" href="tel:70000000000">+7 (000) 000-00-00</a>
+              <a class="phone" href="tel:+70000000000">+7 (000) 000-00-00</a>
 
               <div class="social">
                 <a class="social-link icon-vk" href="#"></a>

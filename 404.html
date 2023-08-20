@@ -7,10 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="img/png" sizes="32x32" href="img/favicon.png">
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="fonts/Inter/stylesheet.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/icons.css">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/404.css">
   <title>FINTECH</title>
 </head>
 
@@ -21,49 +21,69 @@
     <header class="header">
       <div class="container">
         <div class="header__inner">
+          <button class="burger" id="burgerBtn">
+            <span class="burger__item">Menu</span>
+          </button>
 
-          <a href="#" class="logo">
-            <img alt="" loading="lazy" src="img/logo.svg">
+          <a href="/index.html" class="logo">
+            <img data-src="img/logo.svg" alt="" loading="lazy" src="img/logo.svg" class="logo__img lazyload">
           </a>
 
-          <nav class="nav">
+          <nav class="nav" id="nav">
             <div class="nav__inner">
               <ul class="nav__list">
                 <li class="nav__item">
-                  <button class="nav__link" id="mainBtn">Главная
-                    <svg class="nav__angle">
-                      <use href="sprite.svg#angle"></use>
-                    </svg>
-                  </button>
-                  <!-- <span><img class="nav__angle" src="img/Main/angle.svg" alt=""></span> -->
-                  <ul class="nav__dropdown" id="mainToggle">
-                    <li class="nav__dropdown-item"><a href="nav__dropdown-link">Наш продукт</a></li>
-                    <li class="nav__dropdown-item"><a href="nav__dropdown-link">Защита</a></li>
-                    <li class="nav__dropdown-item"><a href="nav__dropdown-link">Заработок</a></li>
-                    <li class="nav__dropdown-item"><a href="nav__dropdown-link">Результаты</a></li>
-                  </ul>
+                  <button class="nav__link icon-angle_solid">Главная</button>
+                  <div class="nav__dropdown">
+                    <ul class="nav__dropdown-list">
+                      <li class="nav__dropdown-item"><a class="nav__dropdown-link" href="#">Наш продукт</a></li>
+                      <li class="nav__dropdown-item"><a class="nav__dropdown-link" href="#">Защита</a></li>
+                      <li class="nav__dropdown-item"><a class="nav__dropdown-link" href="#">Заработок</a></li>
+                      <li class="nav__dropdown-item"><a class="nav__dropdown-link" href="#">Результаты</a></li>
+                    </ul>
+                  </div>
                 </li>
                 <li class="nav__item">
-                  <button class="nav__link" id="productBtn">О продукте &laquo;Upline&raquo;</button>
-                  <!-- <span><img class="nav__angle" src="img/Main/angle.svg" alt=""></span> -->
+                  <button class="nav__link icon-angle_solid">О продукте &laquo;Upline&raquo;</button>
+                  <div class="nav__dropdown">
+                    <ul class="nav__dropdown-list">
+                      <li class="nav__dropdown-item"><a class="nav__dropdown-link" href="about-up-line.html">Наш
+                          продукт</a></li>
+                      <li class="nav__dropdown-item"><a class="nav__dropdown-link" href="privacy-policy.html">Защита</a>
+                      </li>
+                      <li class="nav__dropdown-item"><a class="nav__dropdown-link" href="404.html">404</a></li>
+                    </ul>
+                  </div>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">О компании</a>
+                  <a class="nav__link" href="about.html">О компании</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Контакты</a>
+                  <a class="nav__link" href="contact.html">Контакты</a>
                 </li>
               </ul>
             </div>
+
+            <div class="mobileMenu__contacts">
+              <a class="phone" href="tel:+70000000000">+7 (000) 000-00-00</a>
+
+              <div class="social">
+                <a class="social-link icon-vk" href="#"></a>
+                <a class="social-link icon-yb" href="#"></a>
+                <a class="social-link icon-viber" href="#"></a>
+                <a class="social-link icon-whatsapp" href="#"></a>
+                <a class="social-link icon-telegram" href="#"></a>
+                <a class="social-link icon-gmail" href="#"></a>
+              </div>
+            </div>
           </nav>
 
-          <a class="phone" href="tel:70000000000">+7 (000) 000-00-00</a>
-
-          <button class="btn btn--header" type="button">
-            <!-- <img src="img/Main/phone.svg" alt=""> -->
-            Заказать звонок
-          </button>
-
+          <div class="header__contacts">
+            <a class="phone" href="tel:70000000000">+7 (000) 000-00-00</a>
+            <button class="btn btn--header icon-phone" type="button">
+              <span class="btn--text">Заказать звонок</span>
+            </button>
+          </div>
         </div>
       </div>
     </header>
@@ -86,35 +106,31 @@
         <div class="footer__inner">
 
           <div class="footer__content">
-            <div class="logo">
-              <img src="img/logo.svg" alt="">
-            </div>
+            <a href="/index.html" class="logo">
+              <img data-src="img/logo.svg" alt="" loading="lazy" src="img/logo.svg" class="logo__img lazyload">
+            </a>
 
             <nav class="nav">
               <div class="nav__inner">
                 <ul class="nav__list">
                   <li class="nav__item">
-                    <button class="nav__link" id="mainBtn">Главная
-                      <svg class="nav__angle">
-                        <use href="sprite.svg#angle"></use>
-                      </svg>
-                    </button>
+                    <a class="nav__link" href="index.html">Главная</a>
                   </li>
                   <li class="nav__item">
-                    <button class="nav__link">О продукте &laquo;Upline&raquo;</button>
+                    <a class="nav__link" href="about-up-line.html">О продукте &laquo;Upline&raquo;</a>
                   </li>
                   <li class="nav__item">
-                    <a class="nav__link" href="#">О компании</a>
+                    <a class="nav__link" href="about.html">О компании</a>
                   </li>
                   <li class="nav__item">
-                    <a class="nav__link" href="#">Контакты</a>
+                    <a class="nav__link" href="contact.html">Контакты</a>
                   </li>
                 </ul>
               </div>
             </nav>
 
             <div class="footer__contacts">
-              <a class="phone" href="tel:70000000000">+7 (000) 000-00-00</a>
+              <a class="phone" href="tel:+70000000000">+7 (000) 000-00-00</a>
 
               <div class="social">
                 <a class="social-link icon-vk" href="#"></a>
