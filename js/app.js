@@ -55,6 +55,21 @@ Array.from(accordionItem).forEach(function (item, i, accordionItem) {
   });
 });
 
+/* Lazy Loaded */
+(async () => {
+  if ('loading' in HTMLImageElement.prototype) {
+    const images = document.querySelectorAll("img.lazyload");
+    images.forEach(img => {
+      img.src = img.dataset.src;
+    });
+  } else {
+    // Динамический импорт библиотеки LazySizes
+    const lazySizesLib = await import('../libs/lazysizes.min.js');
+    // Инициализация LazySizes (чтение data-src & class=lazyload)
+    lazySizes.init(); // lazySizes применяется при обработке изображений, находящихся на странице.
+  }
+})();
+
 /* Валидация формы */
 console.log('Init!');
 // inputmask

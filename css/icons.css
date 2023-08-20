@@ -11,7 +11,9 @@
 }
 
 [class^="icon-"]::before,
-[class*=" icon-"]::before {
+[class*=" icon-"]::before,
+[class^="icon-"]::after,
+[class*=" icon-"]::after {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
   speak: never;
@@ -30,7 +32,7 @@
   content: "\e900";
 }
 
-.icon-angle_solid:before {
+.icon-angle_solid::after {
   content: "\e901";
 }
 

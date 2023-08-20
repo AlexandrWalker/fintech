@@ -29,22 +29,24 @@
             <div class="nav__inner">
               <ul class="nav__list">
                 <li class="nav__item">
-                  <button class="nav__link" id="mainBtn">Главная
-                    <svg class="nav__angle">
-                      <use href="sprite.svg#angle"></use>
-                    </svg>
-                  </button>
-                  <!-- <span><img class="nav__angle" src="img/Main/angle.svg" alt=""></span> -->
-                  <ul class="nav__dropdown" id="mainToggle">
-                    <li class="nav__dropdown-item"><a href="nav__dropdown-link">Наш продукт</a></li>
-                    <li class="nav__dropdown-item"><a href="nav__dropdown-link">Защита</a></li>
-                    <li class="nav__dropdown-item"><a href="nav__dropdown-link">Заработок</a></li>
-                    <li class="nav__dropdown-item"><a href="nav__dropdown-link">Результаты</a></li>
-                  </ul>
+                  <button class="nav__link icon-angle_solid">Главная</button>
+                  <div class="nav__dropdown">
+                    <ul class="nav__dropdown-list">
+                      <li class="nav__dropdown-item"><a class="nav__dropdown-link" href="#">Наш продукт</a></li>
+                      <li class="nav__dropdown-item"><a class="nav__dropdown-link" href="#">Защита</a></li>
+                      <li class="nav__dropdown-item"><a class="nav__dropdown-link" href="#">Заработок</a></li>
+                      <li class="nav__dropdown-item"><a class="nav__dropdown-link" href="#">Результаты</a></li>
+                    </ul>
+                  </div>
                 </li>
                 <li class="nav__item">
-                  <button class="nav__link" id="productBtn">О продукте &laquo;Upline&raquo;</button>
-                  <!-- <span><img class="nav__angle" src="img/Main/angle.svg" alt=""></span> -->
+                  <button class="nav__link icon-angle_solid">О продукте &laquo;Upline&raquo;</button>
+                  <div class="nav__dropdown">
+                    <ul class="nav__dropdown-list">
+                      <li class="nav__dropdown-item"><a class="nav__dropdown-link" href="#">Наш продукт</a></li>
+                      <li class="nav__dropdown-item"><a class="nav__dropdown-link" href="#">Защита</a></li>
+                    </ul>
+                  </div>
                 </li>
                 <li class="nav__item">
                   <a class="nav__link" href="#">О компании</a>
@@ -58,8 +60,7 @@
 
           <a class="phone" href="tel:70000000000">+7 (000) 000-00-00</a>
 
-          <button class="btn btn--header" type="button">
-            <!-- <img src="img/Main/phone.svg" alt=""> -->
+          <button class="btn btn--header icon-phone" type="button">
             Заказать звонок
           </button>
 
@@ -77,6 +78,10 @@
           <div class="glow glow--4"></div>
           <div class="circle circle--1"></div>
           <div class="circle circle--2"></div>
+
+          <img src="img/Main/lightning.svg" alt="" class="hero__image-lightning">
+          <!-- <img src="img/Main/angle.svg" alt="" class="hero__image-angle"> -->
+          <!-- <img src="img/Main/usd.svg" alt="" class="hero__image-usd"> -->
 
           <div class="hero__inner">
 
@@ -120,7 +125,8 @@
       <div class="product">
         <div class="container">
           <div class="product__inner">
-            <img class="product__image" src="img/About Up-line/about.png" srcset="" loading="lazy" alt="">
+            <img data-src="img/main/product-1x.png" srcset="img/main/product-1x.png 1x, img/main/product-2x.png 2x"
+              alt="" loading="lazy" src="img/main/product-1x.png" class="product__image lazyload">
             <div class="product__content">
               <h2 class="product__title">
                 Наш продукт - прибыльный <span class="text--color">торговый робот Upline</span>
@@ -157,7 +163,8 @@
                 возможностей робота. Гарантируем возврат средств в течение 1 месяца в случае сбоев системы.</p>
             </div>
             <div class="capital__image">
-              <img src="img/Main/shield.png" alt="">
+              <img data-src="img/main/shield-1x.png" srcset="img/main/shield-1x.png 1x, img/main/shield-2x.png 2x"
+                alt="" loading="lazy" src="img/main/shield-1x.png" class="lazyload">
             </div>
           </div>
         </div>
@@ -167,7 +174,8 @@
         <div class="container">
           <div class="trade__inner">
             <div class="trade__image">
-              <img src="img/Main/cup.png" alt="">
+              <img data-src="img/main/cup-1x.png" srcset="img/main/cup-1x.png 1x, img/main/cup-2x.png 2x" alt=""
+                loading="lazy" src="img/main/cup-1x.png" class="lazyload">
             </div>
             <div class="trade__content">
               <h2 class="trade__title">
@@ -194,18 +202,20 @@
 
             <div class="profit-2__items">
               <div class="profit-2__item">
-                <picture class="profit-2__item-picture">
-                  <img class="profit-2__item-image" src="img/Main/cup-2.png" alt="">
-                </picture>
+                <div class="profit-2__image">
+                  <img data-src="img/main/trophy-1x.png" srcset="img/main/trophy-1x.png 1x, img/main/trophy-2x.png 2x"
+                    alt="" loading="lazy" src="img/main/trophy-1x.png" class="lazyload">
+                </div>
                 <h3 class="profit-2__item-title">Прогрессивный <span class="text--color">функционал</span></h3>
                 <p class="profit-2__item-text">Регулярно дорабатываем функционал и внедряем прогрессивные IT-решения для
                   повышения эффективности бота. Наша миссия — занять лидирующую позицию на рынке и обеспечить
                   пользователям высокую доходность.</p>
               </div>
               <div class="profit-2__item">
-                <picture class="profit-2__item-picture">
-                  <img class="profit-2__item-image" src="img/Main/badge.png" alt="">
-                </picture>
+                <div class="profit-2__image">
+                  <img data-src="img/Main/badge-1x.png" srcset="img/Main/badge-1x.png 1x, img/Main/badge-2x.png 2x"
+                    alt="" loading="lazy" src="img/Main/badge-1x.png" class="lazyload">
+                </div>
                 <h3 class="profit-2__item-title">Прогрессивный <span class="text--color">функционал</span></h3>
                 <p class="profit-2__item-text">Ведем разработки при поддержке «Университета Иннополиса» и планируем
                   интеграцию искусственного интеллекта для более глубокого анализа движения валют и рационализации
@@ -241,6 +251,8 @@
               </label>
               <button class="btn btn--offer">Запросить доступ</button>
             </form>
+            <img data-src="img/main/proc-1x.png" srcset="img/main/proc-1x.png 1x, img/main/proc-2x.png 2x" alt=""
+              loading="lazy" src="img/main/proc-1x.png" class="offer__image lazyload">
           </div>
         </div>
       </div>
@@ -260,72 +272,50 @@
             <div class="swiper mySwiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <img class="swiper-slide__img" src="img/Team/team1.png" alt="">
+                  <img data-src="img/team/team1-1x.png" srcset="img/team/team1-1x.png 1x, img/team/team1-2x.png 2x"
+                    alt="" loading="lazy" src="img/team/team1-1x.png" class="swiper-slide__image lazyload">
                   <div class="swiper-slide__body">
                     <span class="team__slider-suptitle">Руководитель</span>
                     <span class="team__slider-name">Афанасьев Борис</span>
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <img class="swiper-slide__img" src="img/Team/team2.png" alt="">
+                  <img data-src="img/team/team2-1x.png" srcset="img/team/team2-1x.png 1x, img/team/team2-2x.png 2x"
+                    alt="" loading="lazy" src="img/team/team2-1x.png" class="swiper-slide__image lazyload">
                   <div class="swiper-slide__body">
                     <span class="team__slider-suptitle">Ведущий разработчик</span>
                     <span class="team__slider-name">Афанасьев Борис</span>
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <img class="swiper-slide__img" src="img/Team/team3.png" alt="">
+                  <img data-src="img/team/team3-1x.png" srcset="img/team/team3-1x.png 1x, img/team/team3-2x.png 2x"
+                    alt="" loading="lazy" src="img/team/team3-1x.png" class="swiper-slide__image lazyload">
                   <div class="swiper-slide__body">
                     <span class="team__slider-suptitle">Разработчик</span>
                     <span class="team__slider-name">Афанасьев Борис</span>
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <img class="swiper-slide__img" src="img/Team/team4.png" alt="">
+                  <img data-src="img/team/team4-1x.png" srcset="img/team/team4-1x.png 1x, img/team/team4-2x.png 2x"
+                    alt="" loading="lazy" src="img/team/team4-1x.png" class="swiper-slide__image lazyload">
                   <div class="swiper-slide__body">
                     <span class="team__slider-suptitle">Старший менеджер</span>
                     <span class="team__slider-name">Афанасьев Борис</span>
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <img class="swiper-slide__img" src="img/Team/team5.png" alt="">
+                  <img data-src="img/team/team5-1x.png" srcset="img/team/team5-1x.png 1x, img/team/team5-2x.png 2x"
+                    alt="" loading="lazy" src="img/team/team5-1x.png" class="swiper-slide__image lazyload">
                   <div class="swiper-slide__body">
                     <span class="team__slider-suptitle">Менеджер продаж</span>
                     <span class="team__slider-name">Афанасьев Борис</span>
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <img class="swiper-slide__img" src="img/Team/team1.png" alt="">
+                  <img data-src="img/team/team1-1x.png" srcset="img/team/team1-1x.png 1x, img/team/team1-2x.png 2x"
+                    alt="" loading="lazy" src="img/team/team-1x.png" class="swiper-slide__image lazyload">
                   <div class="swiper-slide__body">
                     <span class="team__slider-suptitle">Руководитель</span>
-                    <span class="team__slider-name">Афанасьев Борис</span>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <img class="swiper-slide__img" src="img/Team/team2.png" alt="">
-                  <div class="swiper-slide__body">
-                    <span class="team__slider-suptitle">Ведущий разработчик</span>
-                    <span class="team__slider-name">Афанасьев Борис</span>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <img class="swiper-slide__img" src="img/Team/team3.png" alt="">
-                  <div class="swiper-slide__body">
-                    <span class="team__slider-suptitle">Разработчик</span>
-                    <span class="team__slider-name">Афанасьев Борис</span>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <img class="swiper-slide__img" src="img/Team/team4.png" alt="">
-                  <div class="swiper-slide__body">
-                    <span class="team__slider-suptitle">Старший менеджер</span>
-                    <span class="team__slider-name">Афанасьев Борис</span>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <img class="swiper-slide__img" src="img/Team/team5.png" alt="">
-                  <div class="swiper-slide__body">
-                    <span class="team__slider-suptitle">Менеджер продаж</span>
                     <span class="team__slider-name">Афанасьев Борис</span>
                   </div>
                 </div>
@@ -336,6 +326,8 @@
           </div>
         </div>
       </div>
+
+      <div class="separator"></div>
 
       <div class="faq">
         <div class="container">
@@ -417,11 +409,7 @@
               <div class="nav__inner">
                 <ul class="nav__list">
                   <li class="nav__item">
-                    <button class="nav__link" id="mainBtn">Главная
-                      <svg class="nav__angle">
-                        <use href="sprite.svg#angle"></use>
-                      </svg>
-                    </button>
+                    <button class="nav__link" id="mainBtn">Главная</button>
                   </li>
                   <li class="nav__item">
                     <button class="nav__link">О продукте &laquo;Upline&raquo;</button>
@@ -437,7 +425,7 @@
             </nav>
 
             <div class="footer__contacts">
-              <a class="phone" href="tel:70000000000">+7 (000) 000-00-00</a>
+              <a class="phone icon-phone" href="tel:70000000000">+7 (000) 000-00-00</a>
 
               <div class="social">
                 <a class="social-link icon-vk" href="#"></a>
