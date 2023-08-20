@@ -1,12 +1,38 @@
 /* Swiper */
-var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 4,
+var swiper = new Swiper(".team-slider", {
+  slidesPerView: 1.15,
   spaceBetween: 24,
   centeredSlides: false,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
+    disabledClass: "swiper-button-enabled",
   },
+  // Responsive breakpoints
+  breakpoints: {
+    // when window width is >= 320px
+    520: {
+      slidesPerView: 2.15,
+    },
+    // when window width is >= 480px
+    820: {
+      slidesPerView: 3.15,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+        disabledClass: "swiper-button-enabled",
+      },
+    },
+    // when window width is >= 640px
+    1100: {
+      slidesPerView: 4,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+        disabledClass: "swiper-button-enabled",
+      },
+    }
+  }
 });
 
 var swiper = new Swiper(".tarif-slider", {
@@ -17,6 +43,7 @@ var swiper = new Swiper(".tarif-slider", {
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
+    disabledClass: "swiper-button-enabled",
   },
   pagination: {
     el: ".swiper-pagination",
@@ -31,15 +58,8 @@ var swiper = new Swiper(".cases-slider", {
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
+    disabledClass: "swiper-button-enabled",
   },
-});
-
-/* Dropdown */
-var mainBtn = document.getElementById("mainBtn");
-var mainToggle = document.getElementById("mainToggle");
-
-mainBtn.addEventListener('click', function () {
-  mainToggle.classList.toggle("show");
 });
 
 /* Accordion */
@@ -69,6 +89,16 @@ Array.from(accordionItem).forEach(function (item, i, accordionItem) {
     lazySizes.init(); // lazySizes применяется при обработке изображений, находящихся на странице.
   }
 })();
+
+
+/* Burger */
+let nav = document.querySelector('#nav');
+let burgerBtn = document.querySelector('#burgerBtn');
+
+burgerBtn.onclick = function () {
+  nav.classList.toggle('show');
+  burgerBtn.classList.toggle('active');
+};
 
 /* Валидация формы */
 console.log('Init!');

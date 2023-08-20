@@ -7,9 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="img/png" sizes="32x32" href="img/favicon.png">
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="fonts/Inter/stylesheet.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/icons.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
   <title>FINTECH</title>
 </head>
 
@@ -21,11 +23,11 @@
       <div class="container">
         <div class="header__inner">
 
-          <a href="#" class="logo">
-            <img alt="" loading="lazy" src="img/logo.svg">
+          <a href="/index.html" class="logo">
+            <img data-src="img/logo.svg" alt="" loading="lazy" src="img/logo.svg" class="logo__img lazyload">
           </a>
 
-          <nav class="nav">
+          <nav class="nav" id="nav">
             <div class="nav__inner">
               <ul class="nav__list">
                 <li class="nav__item">
@@ -43,27 +45,46 @@
                   <button class="nav__link icon-angle_solid">О продукте &laquo;Upline&raquo;</button>
                   <div class="nav__dropdown">
                     <ul class="nav__dropdown-list">
-                      <li class="nav__dropdown-item"><a class="nav__dropdown-link" href="#">Наш продукт</a></li>
-                      <li class="nav__dropdown-item"><a class="nav__dropdown-link" href="#">Защита</a></li>
+                      <li class="nav__dropdown-item"><a class="nav__dropdown-link" href="about-up-line.html">Наш
+                          продукт</a></li>
+                      <li class="nav__dropdown-item"><a class="nav__dropdown-link" href="privacy-policy.html">Защита</a>
+                      </li>
+                      <li class="nav__dropdown-item"><a class="nav__dropdown-link" href="404.html">404</a></li>
                     </ul>
                   </div>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">О компании</a>
+                  <a class="nav__link" href="about.html">О компании</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="#">Контакты</a>
+                  <a class="nav__link" href="contact.html">Контакты</a>
                 </li>
               </ul>
             </div>
+
+            <div class="mobileMenu__contacts">
+              <a class="phone" href="tel:+70000000000">+7 (000) 000-00-00</a>
+
+              <div class="social">
+                <a class="social-link icon-vk" href="#"></a>
+                <a class="social-link icon-yb" href="#"></a>
+                <a class="social-link icon-viber" href="#"></a>
+                <a class="social-link icon-whatsapp" href="#"></a>
+                <a class="social-link icon-telegram" href="#"></a>
+                <a class="social-link icon-gmail" href="#"></a>
+              </div>
+            </div>
           </nav>
 
-          <a class="phone" href="tel:70000000000">+7 (000) 000-00-00</a>
-
-          <button class="btn btn--header icon-phone" type="button">
-            Заказать звонок
-          </button>
-
+          <div class="header__contacts">
+            <a class="phone" href="tel:70000000000">+7 (000) 000-00-00</a>
+            <button class="btn btn--header icon-phone" type="button">
+              Заказать звонок
+            </button>
+            <button class="burger" id="burgerBtn">
+              <span class="burger__item">Menu</span>
+            </button>
+          </div>
         </div>
       </div>
     </header>
@@ -79,12 +100,13 @@
           <div class="circle circle--1"></div>
           <div class="circle circle--2"></div>
 
-          <img src="img/Main/lightning.svg" alt="" class="hero__image-lightning">
-          <!-- <img src="img/Main/angle.svg" alt="" class="hero__image-angle"> -->
-          <!-- <img src="img/Main/usd.svg" alt="" class="hero__image-usd"> -->
+          <img data-src="img/lightning.svg" src="img/lightning.svg" alt="" loading="lazy"
+            class="hero__image-lightning lazyload">
+          <img data-src="img/triangle.svg" src="img/triangle.svg" alt="" loading="lazy"
+            class="hero__image-triangle lazyload">
+          <img data-src="img/usd.svg" src="img/usd.svg" alt="" loading="lazy" class="hero__image-usd lazyload">
 
           <div class="hero__inner">
-
             <div class="hero__content">
               <h1 class="hero__title"><span class="text--color">Ведущий разработчик</span> программного
                 обеспечения в сфере финансов</h1>
@@ -269,7 +291,7 @@
               </p>
             </div>
 
-            <div class="swiper mySwiper">
+            <div class="swiper team-slider">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <img data-src="img/team/team1-1x.png" srcset="img/team/team1-1x.png 1x, img/team/team1-2x.png 2x"
@@ -401,31 +423,31 @@
         <div class="footer__inner">
 
           <div class="footer__content">
-            <div class="logo">
-              <img src="img/logo.svg" alt="">
-            </div>
+            <a href="/index.html" class="logo">
+              <img data-src="img/logo.svg" alt="" loading="lazy" src="img/logo.svg" class="logo__img lazyload">
+            </a>
 
             <nav class="nav">
               <div class="nav__inner">
                 <ul class="nav__list">
                   <li class="nav__item">
-                    <button class="nav__link" id="mainBtn">Главная</button>
+                    <a class="nav__link" href="index.html">Главная</a>
                   </li>
                   <li class="nav__item">
-                    <button class="nav__link">О продукте &laquo;Upline&raquo;</button>
+                    <a class="nav__link" href="about-up-line.html">О продукте &laquo;Upline&raquo;</a>
                   </li>
                   <li class="nav__item">
-                    <a class="nav__link" href="#">О компании</a>
+                    <a class="nav__link" href="about.html">О компании</a>
                   </li>
                   <li class="nav__item">
-                    <a class="nav__link" href="#">Контакты</a>
+                    <a class="nav__link" href="contact.html">Контакты</a>
                   </li>
                 </ul>
               </div>
             </nav>
 
             <div class="footer__contacts">
-              <a class="phone icon-phone" href="tel:70000000000">+7 (000) 000-00-00</a>
+              <a class="phone" href="tel:+70000000000">+7 (000) 000-00-00</a>
 
               <div class="social">
                 <a class="social-link icon-vk" href="#"></a>
