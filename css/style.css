@@ -507,6 +507,10 @@ body {
   overflow: hidden;
 }
 
+.hero .container {
+  padding: 0;
+}
+
 .hero .glow--1 {
   position: absolute;
   top: 223px;
@@ -611,6 +615,7 @@ body {
   max-width: 1096px;
   margin: 0 auto;
   margin-bottom: 144px;
+  padding: 0 15px;
 }
 
 .hero__title {
@@ -638,6 +643,7 @@ body {
   -ms-flex-pack: justify;
   justify-content: space-between;
   gap: 24px;
+  padding-left: 15px;
 }
 
 .hero__item {
@@ -974,7 +980,7 @@ body {
   transform: translateY(-50%);
 }
 
-.profit-2__image:before {
+.profit-2__item:before {
   content: "";
   position: absolute;
   top: 76px;
@@ -993,7 +999,7 @@ body {
   filter: blur(70px);
 }
 
-.profit-2__image:after {
+.profit-2__item:after {
   content: "";
   position: absolute;
   left: 15px;
@@ -1346,9 +1352,9 @@ body {
 
 .accordion__active+.accordion__body {
   max-height: 100%;
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
 }
 
 .accordion__body {
@@ -1357,6 +1363,9 @@ body {
   max-height: 0;
   overflow: hidden;
   color: var(--white, #fff);
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
 }
 
 .accordion__text {
@@ -3531,6 +3540,14 @@ body {
 }
 
 @media (max-width:990px) {
+
+  .faq__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
   .upline-hero__inner {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3838,13 +3855,6 @@ body {
     -ms-flex-align: center;
     align-items: center;
     gap: 123px;
-  }
-
-  .faq__inner {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
   }
 
   .faq__content {
