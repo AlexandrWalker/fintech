@@ -8,13 +8,12 @@ var swiper = new Swiper(".team-slider", {
     prevEl: ".swiper-button-prev",
     disabledClass: "swiper-button-enabled",
   },
-  // Responsive breakpoints
   breakpoints: {
-    // when window width is >= 320px
+    // when window width is >= 520px
     520: {
       slidesPerView: 2.15,
     },
-    // when window width is >= 480px
+    // when window width is >= 820px
     820: {
       slidesPerView: 3.15,
       navigation: {
@@ -23,7 +22,7 @@ var swiper = new Swiper(".team-slider", {
         disabledClass: "swiper-button-enabled",
       },
     },
-    // when window width is >= 640px
+    // when window width is >= 1100px
     1100: {
       slidesPerView: 4,
       navigation: {
@@ -36,7 +35,7 @@ var swiper = new Swiper(".team-slider", {
 });
 
 var swiper = new Swiper(".tarif-slider", {
-  slidesPerView: 3,
+  slidesPerView: 1,
   spaceBetween: 24,
   autoHeight: true,
   spaceBetween: 20,
@@ -49,6 +48,30 @@ var swiper = new Swiper(".tarif-slider", {
     el: ".swiper-pagination",
     clickable: true,
   },
+  breakpoints: {
+    // when window width is >= 375px
+    375: {
+      slidesPerView: 1.2,
+    },
+    // when window width is >= 820px
+    820: {
+      slidesPerView: 2,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+        disabledClass: "swiper-button-enabled",
+      },
+    },
+    // when window width is >= 1100px
+    1100: {
+      slidesPerView: 3,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+        disabledClass: "swiper-button-enabled",
+      },
+    }
+  }
 });
 
 var swiper = new Swiper(".cases-slider", {
@@ -72,6 +95,19 @@ Array.from(accordionItem).forEach(function (item, i, accordionItem) {
       active[0].classList.remove('accordion__active');
 
     this.classList.toggle('accordion__active');
+  });
+});
+
+/* Cases */
+var caseItem = document.querySelectorAll('.case__body-link'),
+  active = document.getElementsByClassName('case__item-active');
+
+Array.from(caseItem).forEach(function (item, i, caseItem) {
+  item.addEventListener('click', function (e) {
+    if (active.length > 0 && active[0] !== this)
+      active[0].classList.remove('case__item-active');
+
+    this.classList.toggle('case__item-active');
   });
 });
 
@@ -102,13 +138,26 @@ burgerBtn.onclick = function () {
 
 /* Валидация формы */
 console.log('Init!');
+
 // inputmask
 const form = document.querySelector('.form');
 const telSelector = form.querySelector('input[type="tel"]');
 const inputMask = new Inputmask('+7 (999) 999-99-99');
 inputMask.mask(telSelector);
-
 const validation = new JustValidate('.form');
+
+const form2 = document.querySelector('.form2');
+const telSelector2 = form2.querySelector('input[type="tel"]');
+const inputMask2 = new Inputmask('+7 (999) 999-99-99');
+inputMask2.mask(telSelector2);
+const validation2 = new JustValidate('.form2');
+const thanx2 = document.getElementById('#calculator-finish');
+
+const form3 = document.querySelector('.form3');
+const telSelector3 = form3.querySelector('input[type="tel"]');
+const inputMask3 = new Inputmask('+7 (999) 999-99-99');
+inputMask3.mask(telSelector3);
+const validation3 = new JustValidate('.form3');
 
 validation
   .addField('.input-name', [
@@ -123,13 +172,11 @@ validation
       rule: 'required',
       value: true,
       errorMessage: ' ',
-      // errorMessage: 'Email обязателен',
     },
     {
       rule: 'email',
       value: true,
       errorMessage: ' ',
-      // errorMessage: 'Введите корректный Email',
     },
   ])
   .addField('.input-tel', [
@@ -137,7 +184,6 @@ validation
       rule: 'required',
       value: true,
       errorMessage: ' ',
-      // errorMessage: 'Телефон обязателен',
     },
     {
       rule: 'function',
@@ -146,7 +192,122 @@ validation
         return phone.length === 10;
       },
       errorMessage: ' ',
-      // errorMessage: 'Введите корректный телефон',
+    },
+  ]).onSuccess((event) => {
+    console.log('Validation passes and form submitted', event);
+
+    let formData = new FormData(event.target);
+
+    console.log(...formData);
+
+    let xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          console.log('Отправлено');
+        }
+      }
+    }
+
+    xhr.open('POST', 'mail.php', true);
+    xhr.send(formData);
+
+    event.target.reset();
+  });
+
+
+validation2
+  .addField('.input-name2', [
+    {
+      rule: 'required',
+      value: true,
+      errorMessage: ' '
+    }
+  ])
+  .addField('.input-mail2', [
+    {
+      rule: 'required',
+      value: true,
+      errorMessage: ' ',
+    },
+    {
+      rule: 'email',
+      value: true,
+      errorMessage: ' ',
+    },
+  ])
+  .addField('.input-tel2', [
+    {
+      rule: 'required',
+      value: true,
+      errorMessage: ' ',
+    },
+    {
+      rule: 'function',
+      validator: function () {
+        const phone = telSelector2.inputmask.unmaskedvalue();
+        return phone.length === 10;
+      },
+      errorMessage: ' ',
+    },
+  ]).onSuccess((event) => {
+    console.log('Validation passes and form submitted', event);
+
+    let formData = new FormData(event.target);
+
+    console.log(...formData);
+
+    let xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          console.log('Отправлено');
+        }
+      }
+    }
+
+    xhr.open('POST', 'mail.php', true);
+    xhr.send(formData);
+
+    event.target.reset();
+  });
+
+
+validation3
+  .addField('.input-name3', [
+    {
+      rule: 'required',
+      value: true,
+      errorMessage: ' '
+    }
+  ])
+  .addField('.input-mail3', [
+    {
+      rule: 'required',
+      value: true,
+      errorMessage: ' ',
+    },
+    {
+      rule: 'email',
+      value: true,
+      errorMessage: ' ',
+    },
+  ])
+  .addField('.input-tel3', [
+    {
+      rule: 'required',
+      value: true,
+      errorMessage: ' ',
+    },
+    {
+      rule: 'function',
+      validator: function () {
+        const phone = telSelector3.inputmask3.unmaskedvalue();
+        return phone.length === 10;
+      },
+      errorMessage: ' ',
     },
   ]).onSuccess((event) => {
     console.log('Validation passes and form submitted', event);

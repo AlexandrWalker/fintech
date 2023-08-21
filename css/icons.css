@@ -1,19 +1,19 @@
 @font-face {
   font-family: 'icomoon';
-  src: url('../fonts/icomoon.eot?k8114i');
-  src: url('../fonts/icomoon.eot?k8114i#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?k8114i') format('truetype'),
-    url('../fonts/icomoon.woff?k8114i') format('woff'),
-    url('../fonts/icomoon.svg?k8114i#icomoon') format('svg');
+  src: url('../fonts/icomoon.eot?igzcjc');
+  src: url('../fonts/icomoon.eot?igzcjc#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?igzcjc') format('truetype'),
+    url('../fonts/icomoon.woff?igzcjc') format('woff'),
+    url('../fonts/icomoon.svg?igzcjc#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="icon-"]::before,
-[class*=" icon-"]::before,
-[class^="icon-"]::after,
-[class*=" icon-"]::after {
+[class^="icon-"]:before,
+[class*=" icon-"]:before,
+[class^="icon-"]:after,
+[class*=" icon-"]:after {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
   speak: never;
@@ -28,75 +28,78 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-angle:before {
+.icon-ruso:before {
   content: "\e900";
 }
 
-.icon-angle_solid::after {
+.icon-arrow:before {
   content: "\e901";
 }
 
-.icon-doc:before {
-  content: "\e902";
-}
-
-.icon-error-star:before {
-  content: "\e903";
-}
-
-.icon-gift:before {
-  content: "\e904";
-}
-
-.icon-gmail:before {
+.icon-angle:before {
   content: "\e905";
 }
 
-.icon-like:before {
+.icon-angle_solid:after {
   content: "\e906";
 }
 
-.icon-micro:before {
-  content: "\e907";
-}
-
-.icon-phone:before {
-  content: "\e908";
-}
-
-.icon-play:before {
-  content: "\e909";
-}
-
-.icon-plus:before {
-  content: "\e90a";
-}
-
-.icon-ruso:before {
-  content: "\e90b";
-  color: #84858c;
-}
-
-.icon-telegram:before {
-  content: "\e90c";
-}
-
-.icon-txt:before {
-  content: "\e90d";
-}
-
-.icon-viber:before {
-  content: "\e90e";
-}
-
-.icon-vk:before {
-  content: "\e90f";
-}
-
-.icon-whatsapp:before {
+.icon-doc:before {
   content: "\e910";
 }
 
-.icon-yb:before {
+.icon-error-star:before {
   content: "\e911";
+}
+
+.icon-gift:before {
+  content: "\e912";
+}
+
+.icon-gmail:before {
+  content: "\e913";
+}
+
+.icon-like:before {
+  content: "\e916";
+}
+
+.icon-micro:before {
+  content: "\e919";
+}
+
+.icon-phone:before {
+  content: "\e91d";
+}
+
+.icon-play:before {
+  content: "\e920";
+}
+
+.icon-plus:before {
+  content: "\e921";
+}
+
+.icon-telegram:before {
+  content: "\e92a";
+}
+
+.icon-txt:before {
+  content: "\e92d";
+}
+
+.icon-viber:before {
+  content: "\e92e";
+}
+
+.icon-vk:before {
+  content: "\e92f";
+}
+
+.icon-whatsapp:before {
+  content: "\e930";
+}
+
+.icon-yb:before {
+  content: "\e931";
 }
