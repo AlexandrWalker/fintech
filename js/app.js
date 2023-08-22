@@ -98,28 +98,18 @@ Array.from(accordionItem).forEach(function (item, i, accordionItem) {
   });
 });
 
-// $(document).ready(function () {
-//   $('.accordion__title').click(function (event) {
-//     if ($('.accordion__list').hasClass('one')) {
-//       $('.accordion__title').not($(this)).removeClass('active');
-//       $('.accordion__body').not($(this).next()).slideUp(300);
-//     }
-//     $(this).toggleClass('active').next().slideToggle(300);
-//   });
-// });
-
 /* Cases */
-// var caseItem = document.querySelectorAll('.case__body-link'),
-//   active = document.getElementsByClassName('case__item-active');
+var caseItem = document.querySelectorAll('.case__body-link'),
+  active = document.getElementsByClassName('case__item-active');
 
-// Array.from(caseItem).forEach(function (item, i, caseItem) {
-//   item.addEventListener('click', function (e) {
-//     if (active.length > 0 && active[0] !== this)
-//       active[0].classList.remove('case__item-active');
+Array.from(caseItem).forEach(function (item, i, caseItem) {
+  item.addEventListener('click', function (e) {
+    if (active.length > 0 && active[0] !== this)
+      active[0].classList.remove('case__item-active');
 
-//     this.classList.toggle('case__item-active');
-//   });
-// });
+    this.classList.toggle('case__item-active');
+  });
+});
 
 /* Lazy Loaded */
 (async () => {
