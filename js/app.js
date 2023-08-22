@@ -314,7 +314,7 @@ validation3
     {
       rule: 'function',
       validator: function () {
-        const phone = telSelector3.inputmask3.unmaskedvalue();
+        const phone = telSelector.inputmask.unmaskedvalue();
         return phone.length === 10;
       },
       errorMessage: ' ',

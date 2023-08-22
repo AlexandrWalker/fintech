@@ -8,7 +8,7 @@
   <link rel="icon" type="img/png" sizes="32x32" href="img/favicon.png">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="fonts/Inter/stylesheet.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/icons.css">
   <link rel="stylesheet" href="css/style.css">
   <title>FINTECH</title>
@@ -96,7 +96,8 @@
       <div class="breadcrumbs">
         <div class="container">
           <ul class="breadcrumbs__list">
-            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
+            <li class="breadcrumbs__item"><a class="breadcrumbs__link"
+                href="https://alexandrwalker.github.io/fintech/">Главная</a></li>
             <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">О компании</a></li>
           </ul>
         </div>
@@ -113,8 +114,10 @@
       <div class="about-us">
         <div class="container">
           <div class="about-us__inner">
-            <img data-src="img/about/about1x.jpg" srcset="img/about/about1x.jpg 1x, img/about/about2x.jpg 2x" alt=""
-              loading="lazy" src="img/about/about1x.jpg" class="about-us__image lazyload">
+            <div class="about-us__block">
+              <img data-src="img/about/about1x.jpg" srcset="img/about/about1x.jpg 1x, img/about/about2x.jpg 2x" alt=""
+                loading="lazy" src="img/about/about1x.jpg" class="about-us__image lazyload">
+            </div>
             <div class="about-us__content">
               <h2 class="title">ООО <span class="text--color">"ФинТех Инновации"</span></h2>
               <p class="about-us__text">
@@ -233,10 +236,26 @@
                 </div>
               </div>
               <div class="swiper-slide">
+                <img data-src="img/team/team3-1x.png" srcset="img/team/team3-1x.png 1x, img/team/team3-2x.png 2x" alt=""
+                  loading="lazy" src="img/team/team3-1x.png" class="swiper-slide__image lazyload">
+                <div class="swiper-slide__body">
+                  <span class="team__slider-suptitle">Разработчик</span>
+                  <span class="team__slider-name">Афанасьев Борис</span>
+                </div>
+              </div>
+              <div class="swiper-slide">
                 <img data-src="img/team/team1-1x.png" srcset="img/team/team1-1x.png 1x, img/team/team1-2x.png 2x" alt=""
-                  loading="lazy" src="img/team/team-1x.png" class="swiper-slide__image lazyload">
+                  loading="lazy" src="img/team/team1-1x.png" class="swiper-slide__image lazyload">
                 <div class="swiper-slide__body">
                   <span class="team__slider-suptitle">Руководитель</span>
+                  <span class="team__slider-name">Афанасьев Борис</span>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img data-src="img/team/team2-1x.png" srcset="img/team/team2-1x.png 1x, img/team/team2-2x.png 2x" alt=""
+                  loading="lazy" src="img/team/team2-1x.png" class="swiper-slide__image lazyload">
+                <div class="swiper-slide__body">
+                  <span class="team__slider-suptitle">Ведущий разработчик</span>
                   <span class="team__slider-name">Афанасьев Борис</span>
                 </div>
               </div>
@@ -292,8 +311,9 @@
 
           <div class="copyright">
             <div class="copyright__text">© 2023 Компания Upline</div>
-            <a href="#" class="privacy-policy__link">Политика конфиденциальности</a>
-            <div class="copyright__text">Сделано в <a class="copyright__link icon-ruso" href="#"></a>
+            <a class="privacy-policy__link" href="https://alexandrwalker.github.io/fintech/privacy-policy">Политика
+              конфиденциальности</a>
+            <div class="copyright__text">Сделано в <a class="copyright__link icon-ruso" href="https://rusodot.ru/"></a>
             </div>
           </div>
 
@@ -498,7 +518,7 @@
 
   </div>
   <!-- JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="libs/swiper-bundle.min.js"></script>
   <script src="libs/inputmask.min.js"></script>
   <script src="libs/just-validate3.3.3.min.js"></script>
   <script src="js/app.js"></script>
