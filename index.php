@@ -5,7 +5,7 @@ echo '<meta name="viewport" content="width=device-width"><link rel="stylesheet" 
 	body{padding:40px;font-size:18px;background:none;}
 	p{margin:10px;padding:0;}
 	p span{color: red; font-weight: bold;}
-	a{text-decoration:none;}
+	a{text-decoration:none;color: red;}
 	</style>';
 
 $dir = './';
