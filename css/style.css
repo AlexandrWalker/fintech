@@ -1197,7 +1197,7 @@ main {
   background: var(--bg-light, #1F2026);
   position: relative;
   overflow: hidden;
-  background-image: url(../img/main/offer-bg1-1x.png);
+  background-image: url(../img/offer-bg-1x.png);
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: 252px 65%;
@@ -3246,7 +3246,7 @@ main {
 }
 
 .offer-2 .offer__inner {
-  background-image: url(../img/main/offer-bg2-1x.png);
+  background-image: url(../img/offer-bg-1x.png);
   background-position: 533px 57%;
 }
 
