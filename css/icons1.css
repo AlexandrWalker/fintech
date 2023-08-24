@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src: url('../fonts/icomoon.eot?g17nw2');
-  src: url('../fonts/icomoon.eot?g17nw2#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?g17nw2') format('truetype'),
-    url('../fonts/icomoon.woff?g17nw2') format('woff'),
-    url('../fonts/icomoon.svg?g17nw2#icomoon') format('svg');
+  src: url('../fonts/icomoon.eot?igzcjc');
+  src: url('../fonts/icomoon.eot?igzcjc#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?igzcjc') format('truetype'),
+    url('../fonts/icomoon.woff?igzcjc') format('woff'),
+    url('../fonts/icomoon.svg?igzcjc#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -30,10 +30,6 @@
 
 .icon-ruso:before {
   content: "\e900";
-}
-
-.icon-lupa:before {
-  content: "\e902";
 }
 
 .icon-arrow:before {
