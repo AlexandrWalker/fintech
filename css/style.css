@@ -1193,6 +1193,7 @@ main {
 .offer__image {
   width: 450px;
   height: auto;
+  -o-object-fit: contain;
   object-fit: contain;
   position: absolute;
   top: 24px;
@@ -3737,6 +3738,8 @@ main {
 
   .product__block {
     width: 100%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
 
