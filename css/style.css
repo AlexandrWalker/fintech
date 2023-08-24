@@ -313,6 +313,13 @@ main {
 
 .nav {
   width: 100%;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.nav__inner .notification {
+  display: none;
 }
 
 .nav__list {
@@ -439,6 +446,11 @@ main {
   -ms-flex-direction: column;
   flex-direction: column;
   gap: 15px;
+  text-align: center;
+  margin-bottom: 50px;
+  -webkit-transition: all .3s ease 0s;
+  -o-transition: all .3s ease 0s;
+  transition: all .3s ease 0s;
 }
 
 .header__contacts {
@@ -556,7 +568,7 @@ main {
 /* Hero */
 .hero {
   background: var(--black, #13141A);
-  margin: 86px 0 150px;
+  margin-top: 86px;
   overflow: hidden;
 }
 
@@ -1407,7 +1419,7 @@ main {
 
 /* FAQ */
 .faq {
-  margin: 100px 0 150px;
+  padding-top: 100px;
 }
 
 .faq__inner {
@@ -1650,11 +1662,7 @@ main {
   color: var(--white);
 }
 
-/* Privacy-Policy oage */
-.privacy-policy {
-  padding-top: 150px;
-}
-
+/* Privacy-Policy page */
 .privacy-policy__inner {
   max-width: 984px;
 }
@@ -1760,7 +1768,7 @@ main {
 
 /* 404 page */
 .not-found {
-  padding: 160px 0;
+  padding-top: 160px;
 }
 
 .not-found__inner {
@@ -2112,7 +2120,7 @@ main {
 
 /* Profit */
 .profit {
-  margin-bottom: 100px;
+  padding-top: 150px;
 }
 
 .profit__inner {
@@ -2202,8 +2210,7 @@ main {
 
 /* Step */
 .step {
-  margin-top: 100px;
-  padding-top: 150px;
+  padding-top: 100px;
 }
 
 .step__inner {
@@ -3447,9 +3454,131 @@ main {
 
 /* Media */
 @media (max-width:1268px) {
-  .header .logo {
+
+  .header .header__inner {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: 1fr auto;
+    gap: 0 50px;
+    padding: 15px 0;
+  }
+
+  .header .header__inner::before {
+    content: "";
+    background: var(--bg, #191A1F);
+    height: 60px;
+    width: calc(100% + 30px);
     position: absolute;
-    left: 109px;
+    top: 0;
+    left: -15px;
+    z-index: 101;
+  }
+
+  .header .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 10px;
+
+    position: relative;
+    left: -15px;
+    top: -100%;
+    right: 0;
+    z-index: 100;
+
+    width: calc(100% + 30px);
+    height: 0;
+    min-height: 0;
+
+    overflow-y: scroll;
+    padding: 0;
+    grid-column: 1/4;
+    grid-row: none;
+
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+  }
+
+  .header .nav.show {
+    top: 0;
+    max-height: 100%;
+    min-height: 100vh;
+    grid-row: 2/2;
+    overflow: scroll;
+    padding: 15px 0 50px;
+
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+  }
+
+  .header .nav.show .mobileMenu__contacts {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+
+  .header .nav__inner {
+    width: 100%;
+  }
+
+  .header .nav__inner .notification {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    position: relative;
+    top: 0;
+  }
+
+  .header .nav__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .header .nav__item {
+    border-bottom: 1px solid var(--sep, #363840);
+  }
+
+  .header .nav__item:hover {
+    background: var(--bg-light);
+  }
+
+  .header .nav__link {
+    padding: 20px 16px;
+  }
+
+  .header .nav__dropdown {
+    position: relative;
+    top: 0;
+    width: 100%;
+    max-height: 0;
+    border-radius: 0;
+    background: transparent;
+  }
+
+  .header .nav__item:hover .nav__dropdown {
+    max-height: -webkit-fit-content;
+    max-height: -moz-fit-content;
+    max-height: fit-content;
+    border: 0;
+  }
+
+  .header .nav__dropdown-list {
+    padding-top: 0;
   }
 
   .btn--header {
@@ -3484,98 +3613,6 @@ main {
   .notification__text,
   .notification__link {
     font-size: 12px;
-  }
-
-  .header__inner {
-    padding: 15px 0;
-  }
-
-  .header .nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    gap: 50px;
-    position: absolute;
-    top: -100%;
-    right: 0;
-    z-index: 100;
-    width: 100%;
-    height: 100%;
-    padding: 122px 0 50px 0;
-    -webkit-transition: all 0.2s linear;
-    -o-transition: all 0.2s linear;
-    transition: all 0.2s linear;
-    overflow-y: scroll;
-    opacity: 0;
-    pointer-events: none;
-  }
-
-  .header .nav.show {
-    top: 0;
-    min-height: 100vh;
-    background: var(--bg, #191A1F);
-    opacity: 1;
-    -webkit-transition: all 0.2s linear;
-    -o-transition: all 0.2s linear;
-    transition: all 0.2s linear;
-    pointer-events: all;
-  }
-
-  .header .nav.show .mobileMenu__contacts {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    text-align: center;
-  }
-
-  .header .nav__inner {
-    width: 100%;
-  }
-
-  .header .nav__list {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .header .nav__item {
-    border-bottom: 1px solid var(--sep, #363840);
-  }
-
-  .header .nav__link {
-    padding: 20px 16px;
-  }
-
-  .header .nav__dropdown {
-    position: relative;
-    top: 0;
-    width: 100%;
-    max-height: 0;
-    border-radius: 0;
-  }
-
-  .header .nav__item:hover .nav__dropdown {
-    max-height: -webkit-fit-content;
-    max-height: -moz-fit-content;
-    max-height: fit-content;
-    border: 0;
-    background: none;
-  }
-
-  .header .nav__dropdown-list {
-    padding-top: 0;
   }
 
   .hero {
@@ -3619,8 +3656,6 @@ main {
   .tarif,
   .cases,
   .reviews,
-  .upline-hero,
-  .privacy-policy,
   .our,
   .about__stat {
     padding-top: 100px;
@@ -4035,13 +4070,12 @@ main {
     font-size: 12px;
   }
 
-  .header__inner {
+  .header .header__inner {
     gap: 0;
   }
 
   .header .logo {
-    position: relative;
-    left: 0;
+    margin: 0 auto;
   }
 
   .btn--header {
