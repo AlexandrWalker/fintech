@@ -1910,8 +1910,14 @@ main {
 }
 
 .certificate__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 30px;
   padding: 50px 80px;
@@ -1921,7 +1927,12 @@ main {
 }
 
 .certificate__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   gap: 15px;
   max-width: 531px;
@@ -1953,9 +1964,17 @@ main {
   top: 50%;
   left: 50%;
   z-index: 1;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -3496,6 +3515,8 @@ main {
 
 #certificate .modal {
   padding: 0;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
   max-width: fit-content;
 }
 
@@ -3544,11 +3565,44 @@ main {
 @media (max-width:1268px) {
 
   .header .header__inner {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: auto 50px 1fr 50px auto;
     grid-template-columns: auto 1fr auto;
+    -ms-grid-rows: 1fr 0 auto;
     grid-template-rows: 1fr auto;
     gap: 0 50px;
     padding: 15px 0;
+  }
+
+  .header .header__inner>*:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+
+  .header .header__inner>*:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+
+  .header .header__inner>*:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+  }
+
+  .header .header__inner>*:nth-child(4) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+
+  .header .header__inner>*:nth-child(5) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+
+  .header .header__inner>*:nth-child(6) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 5;
   }
 
   .header .header__inner::before {
@@ -3590,6 +3644,8 @@ main {
 
     overflow-y: scroll;
     padding: 0;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
     grid-column: 1/4;
     grid-row: none;
 
@@ -3602,6 +3658,7 @@ main {
     top: 0;
     max-height: 100%;
     min-height: 100vh;
+    -ms-grid-row: 2;
     grid-row: 2/2;
     overflow: scroll;
     padding: 15px 0 50px;
@@ -3950,6 +4007,9 @@ main {
   }
 
   .certificate__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
 

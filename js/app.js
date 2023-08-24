@@ -86,30 +86,34 @@ var swiper = new Swiper(".cases-slider", {
 });
 
 /* Accordion */
-var accordionItem = document.querySelectorAll('.accordion__title'),
-  active = document.getElementsByClassName('accordion__active');
+(function () {
+  var accordionItem = document.querySelectorAll('.accordion__title'),
+    active = document.getElementsByClassName('accordion__active');
 
-Array.from(accordionItem).forEach(function (item, i, accordionItem) {
-  item.addEventListener('click', function (e) {
-    if (active.length > 0 && active[0] !== this)
-      active[0].classList.remove('accordion__active');
+  Array.from(accordionItem).forEach(function (item, i, accordionItem) {
+    item.addEventListener('click', function (e) {
+      if (active.length > 0 && active[0] !== this)
+        active[0].classList.remove('accordion__active');
 
-    this.classList.toggle('accordion__active');
+      this.classList.toggle('accordion__active');
+    });
   });
-});
+})();
 
 /* Cases */
-var caseItem = document.querySelectorAll('.case__body-link'),
-  active = document.getElementsByClassName('case__item-active');
+(function () {
+  var caseItem = document.querySelectorAll('.case__body-link'),
+    active = document.getElementsByClassName('case__item-active');
 
-Array.from(caseItem).forEach(function (item, i, caseItem) {
-  item.addEventListener('click', function (e) {
-    if (active.length > 0 && active[0] !== this)
-      active[0].classList.remove('case__item-active');
+  Array.from(caseItem).forEach(function (item, i, caseItem) {
+    item.addEventListener('click', function (e) {
+      if (active.length > 0 && active[0] !== this)
+        active[0].classList.remove('case__item-active');
 
-    this.classList.toggle('case__item-active');
+      this.classList.toggle('case__item-active');
+    });
   });
-});
+})();
 
 /* Lazy Loaded */
 (async () => {
