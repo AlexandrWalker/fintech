@@ -79,6 +79,14 @@ body {
   background-size: 100px;
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
+main {
+  margin: 0 0 auto;
+}
+
 .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -87,7 +95,7 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 100%;
+  min-height: 100vh;
   overflow: hidden;
 }
 
@@ -782,7 +790,7 @@ body {
 
 /* Product */
 .product {
-  margin-bottom: 150px;
+  padding-top: 150px;
 }
 
 .product__inner {
@@ -835,7 +843,7 @@ body {
 
 /* Capital */
 .capital {
-  margin-bottom: 150px;
+  padding-top: 150px;
 }
 
 .capital__inner {
@@ -941,7 +949,7 @@ body {
 
 /* Trade */
 .trade {
-  margin-bottom: 150px;
+  padding-top: 150px;
 }
 
 .trade__inner {
@@ -1040,7 +1048,7 @@ body {
 
 /* Profit */
 .profit-2 {
-  margin-bottom: 150px;
+  padding-top: 150px;
 }
 
 .profit-2__inner {
@@ -1159,7 +1167,7 @@ body {
 
 /* Offer */
 .offer {
-  margin-bottom: 150px;
+  padding-top: 150px;
 }
 
 .offer__inner {
@@ -1176,7 +1184,7 @@ body {
   background: var(--bg-light, #1F2026);
   position: relative;
   overflow: hidden;
-  background-image: url(../img/main/offer-bg-1x.png);
+  background-image: url(../img/main/offer-bg-1x-1.png);
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: 252px 65%;
@@ -1185,6 +1193,7 @@ body {
 .offer__image {
   width: 450px;
   height: auto;
+  object-fit: contain;
   position: absolute;
   top: 24px;
   right: 130px;
@@ -1308,7 +1317,7 @@ body {
 
 .swiper-slide {
   min-width: 280px;
-  height: 420px;
+  height: auto;
   position: relative;
   z-index: 2;
 }
@@ -1321,10 +1330,6 @@ body {
   object-fit: cover;
   border-radius: 5px;
   border: 1px solid rgba(255, 255, 255, 0.15);
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
 }
 
 .swiper-slide__body {
@@ -1342,8 +1347,10 @@ body {
   -ms-flex-align: start;
   align-items: flex-start;
   gap: 2px;
-  position: relative;
+  position: absolute;
+  bottom: 0;
   z-index: 2;
+  width: 100%;
   height: 100%;
   padding: 30px;
   background: -o-linear-gradient(top, rgba(33, 34, 41, 0.05) 0%, rgba(33, 34, 41, 0.05) 53.48%, rgba(33, 34, 41, 0.80) 100%);
@@ -1519,6 +1526,7 @@ body {
 
 /* Footer */
 .footer {
+  margin-top: 150px;
   background: var(--black, #13141A);
 }
 
@@ -1643,7 +1651,7 @@ body {
 
 /* Privacy-Policy oage */
 .privacy-policy {
-  margin-bottom: 150px;
+  padding-top: 150px;
 }
 
 .privacy-policy__inner {
@@ -1659,10 +1667,6 @@ body {
 }
 
 /* Contact page */
-.contact {
-  padding: 0 0 150px;
-}
-
 .contact__title {
   color: var(--white, #fff);
   font-size: 47px;
@@ -1808,10 +1812,6 @@ body {
   line-height: 160%;
 }
 
-.about-us {
-  margin-bottom: 150px;
-}
-
 .about-us__inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1851,7 +1851,7 @@ body {
 
 /* Our */
 .our {
-  margin-bottom: 150px;
+  padding-top: 150px;
 }
 
 .our__inner {
@@ -1883,7 +1883,7 @@ body {
 
 /* About__stat */
 .about__stat {
-  margin-bottom: 150px;
+  padding-top: 150px;
 }
 
 .about__stat .hero__list {
@@ -1891,7 +1891,7 @@ body {
 }
 
 .team {
-  margin-bottom: 150px;
+  padding-top: 150px;
 }
 
 .team__list {
@@ -1912,7 +1912,6 @@ body {
 .upline-hero {
   background: var(--black, #13141A);
   padding: 245.5px 0 50px;
-  margin-bottom: 150px;
   position: relative;
   overflow: hidden;
 }
@@ -2047,7 +2046,7 @@ body {
 
 /* Avto */
 .avto {
-  margin-bottom: 150px;
+  padding-top: 150px;
 }
 
 .avto__inner {
@@ -2203,7 +2202,7 @@ body {
 /* Step */
 .step {
   margin-top: 100px;
-  margin-bottom: 150px;
+  padding-top: 150px;
 }
 
 .step__inner {
@@ -2322,7 +2321,7 @@ body {
 
 /* Profit-3 */
 .profit-3 {
-  margin-bottom: 150px;
+  padding-top: 150px;
 }
 
 .profit-3__inner {
@@ -2410,7 +2409,7 @@ body {
 
 /* Emoji */
 .emoji {
-  margin-bottom: 150px;
+  padding-top: 150px;
 }
 
 .emoji__inner {
@@ -2504,7 +2503,7 @@ body {
 
 /* UpLine team */
 .upline-team {
-  margin-bottom: 150px;
+  padding-top: 150px;
 }
 
 .upline-team__inner {
@@ -2556,7 +2555,7 @@ body {
 
 /* Tarif */
 .tarif {
-  margin-bottom: 150px;
+  padding-top: 150px;
 }
 
 .tarif__inner {
@@ -2584,6 +2583,9 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 15px;
   max-width: 872px;
   width: 100%;
@@ -2787,7 +2789,7 @@ body {
 
 /* Cases */
 .cases {
-  margin-bottom: 150px;
+  padding-top: 150px;
 }
 
 .cases__inner {
@@ -2974,7 +2976,7 @@ body {
 
 /* Reviews */
 .reviews {
-  margin-bottom: 150px;
+  padding-top: 150px;
 }
 
 .reviews__inner {
@@ -3145,7 +3147,7 @@ body {
 
 .offer-2 .offer__image {
   width: 610px;
-  height: auto;
+  height: 590px;
   position: absolute;
   top: -44px;
   right: -40px;
@@ -3153,6 +3155,8 @@ body {
 }
 
 .offer-3 .offer__image {
+  width: 403px;
+  height: 352px;
   top: -8px;
   right: 90px;
 }
@@ -3501,7 +3505,7 @@ body {
     align-items: center;
     gap: 50px;
     position: absolute;
-    top: -1000%;
+    top: -100%;
     right: 0;
     z-index: 100;
     width: 100%;
@@ -3511,12 +3515,19 @@ body {
     -o-transition: all 0.2s linear;
     transition: all 0.2s linear;
     overflow-y: scroll;
+    opacity: 0;
+    pointer-events: none;
   }
 
   .header .nav.show {
     top: 0;
     min-height: 100vh;
     background: var(--bg, #191A1F);
+    opacity: 1;
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    pointer-events: all;
   }
 
   .header .nav.show .mobileMenu__contacts {
@@ -3526,7 +3537,7 @@ body {
     text-align: center;
   }
 
-  .header .nav.show .nav__inner {
+  .header .nav__inner {
     width: 100%;
   }
 
@@ -3609,30 +3620,31 @@ body {
   .reviews,
   .upline-hero,
   .privacy-policy,
-  .about-us,
   .our,
   .about__stat {
-    margin-bottom: 100px;
+    padding-top: 100px;
+    margin: 0;
   }
 
   .team,
   .upline-team,
   .profit {
+    padding-top: 100px;
     margin-bottom: 50px;
   }
 
   .faq,
   .step {
-    margin-top: 50px;
-    margin-bottom: 100px;
+    padding-top: 50px;
+    margin: 0;
   }
 
   .about-team {
-    margin-bottom: 100px;
+    padding-top: 100px;
   }
 
-  .contact {
-    padding-bottom: 100px;
+  .footer {
+    margin-top: 100px;
   }
 
   .faq__inner {
@@ -3721,6 +3733,11 @@ body {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+  }
+
+  .product__block {
+    width: 100%;
+    justify-content: center;
   }
 
   .product__image {
@@ -3918,6 +3935,7 @@ body {
 
   .offer-2 .offer__image {
     width: 380px;
+    height: 363px;
     top: 50%;
     -webkit-transform: translateY(-50%) translateX(-50%);
     -ms-transform: translateY(-50%) translateX(-50%);
@@ -3944,6 +3962,7 @@ body {
   .case__image,
   .case__body {
     width: 100%;
+    height: auto;
   }
 
   .cases__nav {
@@ -4207,7 +4226,7 @@ body {
 
   .offer__image {
     width: 258px;
-    height: auto;
+    height: 100%;
     top: 49%;
   }
 

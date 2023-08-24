@@ -126,7 +126,6 @@ Array.from(caseItem).forEach(function (item, i, caseItem) {
   }
 })();
 
-
 /* Burger */
 let nav = document.querySelector('#nav');
 let burgerBtn = document.querySelector('#burgerBtn');
@@ -134,7 +133,27 @@ let burgerBtn = document.querySelector('#burgerBtn');
 burgerBtn.onclick = function () {
   nav.classList.toggle('show');
   burgerBtn.classList.toggle('active');
+  document.body.classList.toggle('no-scroll');
 };
+
+/* Anchor */
+const anchors = document.querySelectorAll('a[href*="#"]')
+for (let anchor of anchors) {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault()
+
+    const blockID = anchor.getAttribute('href').substr(1)
+
+    nav.classList.remove('show');
+    burgerBtn.classList.remove('active');
+    document.body.classList.remove('no-scroll');
+
+    document.getElementById(blockID).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
+  })
+}
 
 /* Валидация формы */
 console.log('Init!');
