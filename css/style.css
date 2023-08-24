@@ -3761,6 +3761,14 @@ main {
     margin-top: 74px;
   }
 
+  .capital__image {
+    margin-right: 54px;
+  }
+
+  .trade__image {
+    margin-left: 56px;
+  }
+
   .profit-2__items {
     gap: 30px;
   }
@@ -3915,6 +3923,14 @@ main {
 
 @media (max-width:990px) {
 
+  .capital__image {
+    margin: 0;
+  }
+
+  .trade__image {
+    margin: 0;
+  }
+
   .product__inner {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3937,33 +3953,6 @@ main {
 
   .product__content {
     width: 100%;
-  }
-
-  .capital__inner {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-    -ms-flex-direction: column-reverse;
-    flex-direction: column-reverse;
-  }
-
-  .capital__image {
-    margin: 0;
-  }
-
-  .trade__inner {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-
-  .trade__image {
-    margin: 0;
-  }
-
-  .capital__content,
-  .trade__content {
-    max-width: 100%;
   }
 
   .team__content {
@@ -4256,6 +4245,17 @@ main {
     display: none;
   }
 
+  .capital__image {
+    width: 220px;
+    height: auto;
+  }
+
+  .trade__image {
+    width: 220px;
+    height: auto;
+    top: 0;
+  }
+
   .offer__inner {
     padding: 25px 30px;
   }
@@ -4397,6 +4397,25 @@ main {
     justify-content: center;
   }
 
+  .capital__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+
+  .trade__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .capital__content,
+  .trade__content {
+    max-width: 100%;
+  }
+
   .hero__image-lightning {
     right: 15px;
     left: unset;
@@ -4438,16 +4457,6 @@ main {
   .hero__title,
   .upline-hero__title {
     font-size: 28px;
-  }
-
-  .capital__image {
-    width: 220px;
-    height: auto;
-  }
-
-  .trade__image {
-    width: 220px;
-    height: auto;
   }
 
   .team__content {
