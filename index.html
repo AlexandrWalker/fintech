@@ -162,8 +162,11 @@
         <div class="container">
           <div class="product__inner">
             <div class="product__block">
-              <img data-src="img/main/product-1x.png" srcset="img/main/product-1x.png 1x, img/main/product-2x.png 2x"
-                alt="" loading="lazy" src="img/main/product-1x.png" class="product__image lazyload">
+              <picture class="product__image">
+                <source media="(min-width: 769px)" srcset="img/main/product-2x.png">
+                <source media="(max-width: 768px)" srcset="img/main/product-1x.png">
+                <img src="img/main/product-1x.png" alt="" loading="lazy">
+              </picture>
             </div>
             <div class="product__content">
               <h2 class="title">
@@ -200,10 +203,11 @@
               <p class="capital__text">Воспользуйтесь бесплатной пробной версией Upline на 14 дней для тестирования
                 возможностей робота. Гарантируем возврат средств в течение 1 месяца в случае сбоев системы.</p>
             </div>
-            <div class="capital__image">
-              <img data-src="img/main/shield-1x.png" srcset="img/main/shield-1x.png 1x, img/main/shield-2x.png 2x"
-                alt="" loading="lazy" src="img/main/shield-1x.png" class="lazyload">
-            </div>
+            <picture class="capital__image">
+              <source media="(min-width: 769px)" srcset="img/main/shield-2x.png">
+              <source media="(max-width: 768px)" srcset="img/main/shield-1x.png">
+              <img src="img/main/shield-1x.png" alt="" loading="lazy">
+            </picture>
           </div>
         </div>
       </div>
@@ -211,10 +215,11 @@
       <div class="trade" id="trade">
         <div class="container">
           <div class="trade__inner">
-            <div class="trade__image">
-              <img data-src="img/main/cup-1x.png" srcset="img/main/cup-1x.png 1x, img/main/cup-2x.png 2x" alt=""
-                loading="lazy" src="img/main/cup-1x.png" class="lazyload">
-            </div>
+            <picture class="trade__image">
+              <source media="(min-width: 769px)" srcset="img/main/cup-2x.png">
+              <source media="(max-width: 768px)" srcset="img/main/cup-1x.png">
+              <img src="img/main/cup-1x.png" alt="" loading="lazy">
+            </picture>
             <div class="trade__content">
               <h2 class="title">
                 Зарабатывайте на трейдинге без нервов <span class="text--color">с минимумом участия</span>
@@ -245,20 +250,22 @@
 
             <div class="profit-2__items">
               <div class="profit-2__item">
-                <div class="profit-2__image">
-                  <img data-src="img/main/trophy-1x.png" srcset="img/main/trophy-1x.png 1x, img/main/trophy-2x.png 2x"
-                    alt="" loading="lazy" src="img/main/trophy-1x.png" class="lazyload">
-                </div>
+                <picture class="profit-2__image">
+                  <source media="(min-width: 769px)" srcset="img/main/trophy-2x.png">
+                  <source media="(max-width: 768px)" srcset="img/main/trophy-1x.png">
+                  <img src="img/main/trophy-1x.png" alt="" loading="lazy">
+                </picture>
                 <h3 class="profit-2__item-title">Прогрессивный <span class="text--color">функционал</span></h3>
                 <p class="profit-2__item-text">Регулярно дорабатываем функционал и внедряем прогрессивные IT-решения для
                   повышения эффективности бота. Наша миссия — занять лидирующую позицию на рынке и обеспечить
                   пользователям высокую доходность.</p>
               </div>
               <div class="profit-2__item">
-                <div class="profit-2__image">
-                  <img data-src="img/main/badge-1x.png" srcset="img/main/badge-1x.png 1x, img/main/badge-2x.png 2x"
-                    alt="" loading="lazy" src="img/main/badge-1x.png" class="lazyload">
-                </div>
+                <picture class="profit-2__image">
+                  <source media="(min-width: 769px)" srcset="img/main/badge-2x.png">
+                  <source media="(max-width: 768px)" srcset="img/main/badge-1x.png">
+                  <img src="img/main/badge-1x.png" alt="" loading="lazy">
+                </picture>
                 <h3 class="profit-2__item-title">Прогрессивный <span class="text--color">функционал</span></h3>
                 <p class="profit-2__item-text">Ведем разработки при поддержке «Университета Иннополиса» и планируем
                   интеграцию искусственного интеллекта для более глубокого анализа движения валют и рационализации
@@ -294,8 +301,11 @@
               </label>
               <button class="btn btn--offer" type="submit">Запросить доступ</button>
             </form>
-            <img data-src="img/main/proc-1x.png" srcset="img/main/proc-1x.png 1x, img/main/proc-2x.png 2x" alt=""
-              loading="lazy" src="img/main/proc-1x.png" class="offer__image lazyload">
+            <picture class="offer__image">
+              <source media="(min-width: 769px)" srcset="img/main/proc-2x.png">
+              <source media="(max-width: 768px)" srcset="img/main/proc-1x.png">
+              <img src="img/main/proc-1x.png" alt="" loading="lazy">
+            </picture>
           </div>
         </div>
       </div>
@@ -315,51 +325,81 @@
             <div class="swiper team-slider">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <img data-src="img/team/team1-1x.png" srcset="img/team/team1-1x.png 1x, img/team/team1-2x.png 2x"
-                    alt="" loading="lazy" src="img/team/team1-1x.png" class="swiper-slide__image lazyload">
-                  <div class="swiper-slide__body">
-                    <span class="team__slider-suptitle">Руководитель</span>
-                    <span class="team__slider-name">Афанасьев Борис</span>
+                  <div class="team-slider__item">
+                    <picture class="swiper-slide__image">
+                      <source media="(min-width: 769px)" srcset="img/team/team1-2x.png">
+                      <source media="(max-width: 768px)" srcset="img/team/team1-1x.png">
+                      <img src="img/team/team1-1x.png" alt="" loading="lazy">
+                    </picture>
+                    <div class="swiper-slide__body">
+                      <span class="team__slider-suptitle">Руководитель</span>
+                      <span class="team__slider-name">Афанасьев Борис</span>
+                    </div>
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <img data-src="img/team/team2-1x.png" srcset="img/team/team2-1x.png 1x, img/team/team2-2x.png 2x"
-                    alt="" loading="lazy" src="img/team/team2-1x.png" class="swiper-slide__image lazyload">
-                  <div class="swiper-slide__body">
-                    <span class="team__slider-suptitle">Ведущий разработчик</span>
-                    <span class="team__slider-name">Афанасьев Борис</span>
+                  <div class="team-slider__item">
+                    <picture class="swiper-slide__image">
+                      <source media="(min-width: 769px)" srcset="img/team/team2-2x.png">
+                      <source media="(max-width: 768px)" srcset="img/team/team2-1x.png">
+                      <img src="img/team/team2-1x.png" alt="" loading="lazy">
+                    </picture>
+                    <div class="swiper-slide__body">
+                      <span class="team__slider-suptitle">Ведущий разработчик</span>
+                      <span class="team__slider-name">Афанасьев Борис</span>
+                    </div>
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <img data-src="img/team/team3-1x.png" srcset="img/team/team3-1x.png 1x, img/team/team3-2x.png 2x"
-                    alt="" loading="lazy" src="img/team/team3-1x.png" class="swiper-slide__image lazyload">
-                  <div class="swiper-slide__body">
-                    <span class="team__slider-suptitle">Разработчик</span>
-                    <span class="team__slider-name">Афанасьев Борис</span>
+                  <div class="team-slider__item">
+                    <picture class="swiper-slide__image">
+                      <source media="(min-width: 769px)" srcset="img/team/team3-2x.png">
+                      <source media="(max-width: 768px)" srcset="img/team/team3-1x.png">
+                      <img src="img/team/team3-1x.png" alt="" loading="lazy">
+                    </picture>
+                    <div class="swiper-slide__body">
+                      <span class="team__slider-suptitle">Разработчик</span>
+                      <span class="team__slider-name">Афанасьев Борис</span>
+                    </div>
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <img data-src="img/team/team4-1x.png" srcset="img/team/team4-1x.png 1x, img/team/team4-2x.png 2x"
-                    alt="" loading="lazy" src="img/team/team4-1x.png" class="swiper-slide__image lazyload">
-                  <div class="swiper-slide__body">
-                    <span class="team__slider-suptitle">Старший менеджер</span>
-                    <span class="team__slider-name">Афанасьев Борис</span>
+                  <div class="team-slider__item">
+                    <picture class="swiper-slide__image">
+                      <source media="(min-width: 769px)" srcset="img/team/team4-2x.png">
+                      <source media="(max-width: 768px)" srcset="img/team/team4-1x.png">
+                      <img src="img/team/team4-1x.png" alt="" loading="lazy">
+                    </picture>
+                    <div class="swiper-slide__body">
+                      <span class="team__slider-suptitle">Старший менеджер</span>
+                      <span class="team__slider-name">Афанасьев Борис</span>
+                    </div>
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <img data-src="img/team/team5-1x.png" srcset="img/team/team5-1x.png 1x, img/team/team5-2x.png 2x"
-                    alt="" loading="lazy" src="img/team/team5-1x.png" class="swiper-slide__image lazyload">
-                  <div class="swiper-slide__body">
-                    <span class="team__slider-suptitle">Менеджер продаж</span>
-                    <span class="team__slider-name">Афанасьев Борис</span>
+                  <div class="team-slider__item">
+                    <picture class="swiper-slide__image">
+                      <source media="(min-width: 769px)" srcset="img/team/team5-2x.png">
+                      <source media="(max-width: 768px)" srcset="img/team/team5-1x.png">
+                      <img src="img/team/team5-1x.png" alt="" loading="lazy">
+                    </picture>
+                    <div class="swiper-slide__body">
+                      <span class="team__slider-suptitle">Менеджер продаж</span>
+                      <span class="team__slider-name">Афанасьев Борис</span>
+                    </div>
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <img data-src="img/team/team1-1x.png" srcset="img/team/team1-1x.png 1x, img/team/team1-2x.png 2x"
-                    alt="" loading="lazy" src="img/team/team-1x.png" class="swiper-slide__image lazyload">
-                  <div class="swiper-slide__body">
-                    <span class="team__slider-suptitle">Руководитель</span>
-                    <span class="team__slider-name">Афанасьев Борис</span>
+                  <div class="team-slider__item">
+                    <picture class="swiper-slide__image">
+                      <source media="(min-width: 769px)" srcset="img/team/team1-2x.png">
+                      <source media="(max-width: 768px)" srcset="img/team/team1-1x.png">
+                      <img src="img/team/team1-1x.png" alt="" loading="lazy">
+                    </picture>
+                    <div class="swiper-slide__body">
+                      <span class="team__slider-suptitle">Руководитель</span>
+                      <span class="team__slider-name">Афанасьев Борис</span>
+                    </div>
                   </div>
                 </div>
               </div>
