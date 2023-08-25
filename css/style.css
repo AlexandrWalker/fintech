@@ -2009,6 +2009,7 @@ main {
 
 .about-team .team-slider__item picture img {
   height: inherit;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
