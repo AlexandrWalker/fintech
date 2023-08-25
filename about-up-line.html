@@ -36,7 +36,11 @@
           </button>
 
           <a href="/" class="logo">
-            <img data-src="img/logo.svg" alt="" loading="lazy" src="img/logo.svg" class="logo__img lazyload">
+            <picture class="logo__img">
+              <source media="(min-width: 769px)" srcset="img/logo-x2.png">
+              <source media="(max-width: 768px)" srcset="img/logo-x1.png">
+              <img src="img/logo-x1.png" alt="" loading="lazy">
+            </picture>
           </a>
 
           <nav class="nav" id="nav">
@@ -128,11 +132,9 @@
           <div class="circle circle--1"></div>
           <div class="circle circle--2"></div>
 
-          <img data-src="img/lightning.svg" src="img/lightning.svg" alt="" loading="lazy"
-            class="upline-hero__image-lightning lazyload">
-          <img data-src="img/triangle.svg" src="img/triangle.svg" alt="" loading="lazy"
-            class="upline-hero__image-triangle lazyload">
-          <img data-src="img/usd.svg" src="img/usd.svg" alt="" loading="lazy" class="upline-hero__image-usd lazyload">
+          <img src="img/lightning.svg" alt="" loading="lazy" class="upline-hero__image-lightning ">
+          <img src="img/triangle.svg" alt="" loading="lazy" class="upline-hero__image-triangle">
+          <img src="img/usd.svg" alt="" loading="lazy" class="upline-hero__image-usd">
 
           <div class="upline-hero__inner">
             <div class="upline-hero__body">
@@ -147,29 +149,28 @@
               </div>
               <button class="btn btn--upline"><span class="icon-gift"></span>Попробовать бесплатно</button>
             </div>
-            <img data-src="img/main/product-1x.png" srcset="img/main/product-1x.png 1x, img/main/product-2x.png 2x"
-              alt="" loading="lazy" src="img/main/product-1x.png" class="upline-hero__image lazyload">
+            <picture class="upline-hero__image">
+              <source media="(min-width: 769px)" srcset="img/main/product-2x.png">
+              <source media="(max-width: 768px)" srcset="img/main/product-1x.png">
+              <img src="img/main/product-1x.png" alt="" loading="lazy">
+            </picture>
           </div>
 
           <div class="upline-hero__items">
             <div class="upline-hero__item">
-              <img data-src="img/upline/analis.svg" src="img/upline/analis.svg" alt="" loading="lazy"
-                class="upline-hero__item-image lazyload">
+              <img src="img/upline/analis.svg" alt="" loading="lazy" class="upline-hero__item-image">
               <span class="upline-hero__item-text">Сверхточный анализ рынка</span>
             </div>
             <div class="upline-hero__item">
-              <img data-src="img/upline/nft-signal.svg" src="img/upline/nft-signal.svg" alt="" loading="lazy"
-                class="upline-hero__item-image lazyload">
+              <img src="img/upline/nft-signal.svg" alt="" loading="lazy" class="upline-hero__item-image">
               <span class="upline-hero__item-text">Мгновенная реакция на сигналы</span>
             </div>
             <div class="upline-hero__item">
-              <img data-src="img/upline/sort.svg" src="img/upline/sort.svg" alt="" loading="lazy"
-                class="upline-hero__item-image lazyload">
+              <img src="img/upline/sort.svg" alt="" loading="lazy" class="upline-hero__item-image">
               <span class="upline-hero__item-text">Возможность ручных настроек</span>
             </div>
             <div class="upline-hero__item">
-              <img data-src="img/upline/hearpods.svg" src="img/upline/hearpods.svg" alt="" loading="lazy"
-                class="upline-hero__item-image lazyload">
+              <img src="img/upline/hearpods.svg" alt="" loading="lazy" class="upline-hero__item-image">
               <span class="upline-hero__item-text">Техническая поддержка 24/7</span>
             </div>
           </div>
@@ -180,9 +181,11 @@
       <div class="avto" id="avto">
         <div class="container">
           <div class="avto__inner">
-            <img data-src="img/upline/asset-generated-1x.png"
-              srcset="img/upline/asset-generated-1x.png 1x, img/upline/asset-generated-2x.png 2x" alt="" loading="lazy"
-              src="img/upline/asset-generated-1x.png" class="avto__image lazyload">
+            <picture class="avto__image">
+              <source media="(min-width: 769px)" srcset="img/upline/asset-generated-2x.png">
+              <source media="(max-width: 768px)" srcset="img/upline/asset-generated-1x.png">
+              <img src="img/upline/asset-generated-1x.png" alt="" loading="lazy">
+            </picture>
             <div class="avto__body">
               <div class="avto__content">
                 <h2 class="title">Автоматизация торговли — первый шаг к <span class="text--color">финансовой
@@ -223,31 +226,25 @@
             <div class="profit__features">
               <div class="profit__features-items">
                 <div class="profit__features-item">
-                  <img data-src="img/upline/phone-screen.svg" src="img/upline/phone-screen.svg" alt="" loading="lazy"
-                    class="profit__features-image lazyload">
+                  <img src="img/upline/phone-screen.svg" alt="" loading="lazy" class="profit__features-image">
                   <p class="profit__features-text">Приложение для мониторинга счетов.</p>
                 </div>
                 <div class="profit__features-item">
-                  <img data-src="img/upline/card.svg" src="img/upline/card.svg" alt="" loading="lazy"
-                    class="profit__features-image lazyload">
+                  <img src="img/upline/card.svg" alt="" loading="lazy" class="profit__features-image">
                   <p class="profit__features-text">Возможность торговли с кредитным плечом 1:2000.</p>
                 </div>
                 <div class="profit__features-item">
-                  <img data-src="img/upline/screen-signal.svg" src="img/upline/screen-signal.svg" alt="" loading="lazy"
-                    class="profit__features-image lazyload">
-
+                  <img src="img/upline/screen-signal.svg" alt="" loading="lazy" class="profit__features-image">
                   <p class="profit__features-text">Удаленный рабочий стол.</p>
                 </div>
               </div>
               <div class="profit__features-items">
                 <div class="profit__features-item">
-                  <img data-src="img/upline/terminal.svg" src="img/upline/terminal.svg" alt="" loading="lazy"
-                    class="profit__features-image lazyload">
+                  <img src="img/upline/terminal.svg" alt="" loading="lazy" class="profit__features-image">
                   <p class="profit__features-text">Продвинутый торговый терминал на базе MetaTrader4.</p>
                 </div>
                 <div class="profit__features-item">
-                  <img data-src="img/upline/sort.svg" src="img/upline/sort.svg" alt="" loading="lazy"
-                    class="profit__features-image lazyload">
+                  <img src="img/upline/sort.svg" alt="" loading="lazy" class="profit__features-image">
                   <p class="profit__features-text">Готовые настройки для быстрого старта торговли через RoboForex.</p>
                 </div>
               </div>
@@ -320,8 +317,17 @@
               </label>
               <button class="btn btn--offer">Установить Upline</button>
             </form>
-            <img data-src="img/upline/card-1x.png" srcset="img/upline/card-1x.png 1x, img/upline/card-2x.png 2x" alt=""
-              loading="lazy" src="img/upline/card-1x.png" class="offer__image lazyload">
+            <picture class="offer__image">
+              <source media="(min-width: 769px)" srcset="img/upline/card-2x.png">
+              <source media="(max-width: 768px)" srcset="img/upline/card-1x.png">
+              <img src="img/upline/card-1x.png" alt="" loading="lazy">
+            </picture>
+
+            <picture class="offer__bg">
+              <source media="(min-width: 769px)" srcset="img/main/offer-bg3-2x.png">
+              <source media="(max-width: 768px)" srcset="img/main/offer-bg3-1x.png">
+              <img src="img/main/offer-bg3-1x.png" alt="" loading="lazy">
+            </picture>
           </div>
         </div>
       </div>
@@ -346,39 +352,46 @@
               <p class="capital__text">Воспользуйтесь бесплатной пробной версией Upline на 14 дней для тестирования
                 возможностей робота. Гарантируем возврат средств в течение 1 месяца в случае сбоев системы.</p>
             </div>
-            <div class="capital__image">
-              <img data-src="img/main/shield-1x.png" srcset="img/main/shield-1x.png 1x, img/main/shield-2x.png 2x"
-                alt="" loading="lazy" src="img/main/shield-1x.png" class="lazyload">
-            </div>
+            <picture class="capital__image">
+              <source media="(min-width: 769px)" srcset="img/main/shield-2x.png">
+              <source media="(max-width: 768px)" srcset="img/main/shield-1x.png">
+              <img src="img/main/shield-1x.png" alt="" loading="lazy">
+            </picture>
           </div>
         </div>
       </div>
 
-      <div class="trade">
+      <div class="trade" id="trade">
         <div class="container">
           <div class="trade__inner">
-            <div class="trade__image">
-              <img data-src="img/main/cup-1x.png" srcset="img/main/cup-1x.png 1x, img/main/cup-2x.png 2x" alt=""
-                loading="lazy" src="img/main/cup-1x.png" class="lazyload">
-            </div>
+            <picture class="trade__image">
+              <source media="(min-width: 769px)" srcset="img/main/cup-2x.png">
+              <source media="(max-width: 768px)" srcset="img/main/cup-1x.png">
+              <img src="img/main/cup-1x.png" alt="" loading="lazy">
+            </picture>
             <div class="trade__content">
               <h2 class="title">
                 Зарабатывайте на трейдинге без нервов <span class="text--color">с минимумом участия</span>
               </h2>
-              <p class="trade__text">Автоматизация позволяет оптимизировать 100% торговых процессов: от поиска сигналов
-                до открытия и закрытия ордеров. Робот находится на рынке 24/7 и контролирует ситуацию, даже когда вы
-                спите. Система возьмет на себя все ключевые вопросы трейдинга — вам останется только определить объем
-                вложений.</p>
-              <p class="trade__text">Интуитивно понятный интерфейс, прошедший юзабилити-тестирование, мониторинг трендов
-                24/7 и обширный
-                функционал упрощают процессы торговли и помогают получать прибыль без специальных знаний и необходимости
-                постоянного контроля рынка.</p>
+              <div class="trade__text">
+                <p>Автоматизация позволяет оптимизировать 100% торговых процессов: от поиска
+                  сигналов
+                  до открытия и закрытия ордеров. Робот находится на рынке 24/7 и контролирует ситуацию, даже когда вы
+                  спите. Система возьмет на себя все ключевые вопросы трейдинга — вам останется только определить объем
+                  вложений.</p>
+                <p>Интуитивно понятный интерфейс, прошедший юзабилити-тестирование, мониторинг
+                  трендов
+                  24/7 и обширный
+                  функционал упрощают процессы торговли и помогают получать прибыль без специальных знаний и
+                  необходимости
+                  постоянного контроля рынка.</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="profit-2">
+      <div class="profit-2" id="profit-2">
         <div class="container">
           <div class="profit-2__inner">
             <h2 class="title">Бесплатно совершенствуем систему для ваших <span class="text--color">прибыльных
@@ -386,20 +399,22 @@
 
             <div class="profit-2__items">
               <div class="profit-2__item">
-                <div class="profit-2__image">
-                  <img data-src="img/main/trophy-1x.png" srcset="img/main/trophy-1x.png 1x, img/main/trophy-2x.png 2x"
-                    alt="" loading="lazy" src="img/main/trophy-1x.png" class="lazyload">
-                </div>
+                <picture class="profit-2__image">
+                  <source media="(min-width: 769px)" srcset="img/main/trophy-2x.png">
+                  <source media="(max-width: 768px)" srcset="img/main/trophy-1x.png">
+                  <img src="img/main/trophy-1x.png" alt="" loading="lazy">
+                </picture>
                 <h3 class="profit-2__item-title">Прогрессивный <span class="text--color">функционал</span></h3>
                 <p class="profit-2__item-text">Регулярно дорабатываем функционал и внедряем прогрессивные IT-решения для
                   повышения эффективности бота. Наша миссия — занять лидирующую позицию на рынке и обеспечить
                   пользователям высокую доходность.</p>
               </div>
               <div class="profit-2__item">
-                <div class="profit-2__image">
-                  <img data-src="img/main/badge-1x.png" srcset="img/main/badge-1x.png 1x, img/main/badge-2x.png 2x"
-                    alt="" loading="lazy" src="img/main/badge-1x.png" class="lazyload">
-                </div>
+                <picture class="profit-2__image">
+                  <source media="(min-width: 769px)" srcset="img/main/badge-2x.png">
+                  <source media="(max-width: 768px)" srcset="img/main/badge-1x.png">
+                  <img src="img/main/badge-1x.png" alt="" loading="lazy">
+                </picture>
                 <h3 class="profit-2__item-title">Прогрессивный <span class="text--color">функционал</span></h3>
                 <p class="profit-2__item-text">Ведем разработки при поддержке «Университета Иннополиса» и планируем
                   интеграцию искусственного интеллекта для более глубокого анализа движения валют и рационализации
@@ -422,8 +437,7 @@
 
             <div class="profit-3__items">
               <div class="profit-3__item">
-                <img data-src="img/upline/server.svg" src="img/upline/server.svg" alt="" loading="lazy"
-                  class="profit-3__item-image lazyload">
+                <img src="img/upline/server.svg" alt="" loading="lazy" class="profit-3__item-image">
                 <div class="profit-3__item-content">
                   <h3 class="profit-3__item-title">Без спецзнаний</h3>
                   <p class="profit-3__item-text">Вам не нужно погружаться в тематику и разбираться в тонкостях торговли
@@ -432,8 +446,7 @@
                 </div>
               </div>
               <div class="profit-3__item">
-                <img data-src="img/upline/sort.svg" src="img/upline/sort.svg" alt="" loading="lazy"
-                  class="profit-3__item-image lazyload">
+                <img src="img/upline/sort.svg" alt="" loading="lazy" class="profit-3__item-image">
                 <div class="profit-3__item-content">
                   <h3 class="profit-3__item-title">Гибкая система настроек</h3>
                   <p class="profit-3__item-text">Вам не нужно погружаться в тематику и разбираться в тонкостях торговли
@@ -441,8 +454,7 @@
                 </div>
               </div>
               <div class="profit-3__item">
-                <img data-src="img/upline/magnifying-glass-chart.svg" src="img/upline/magnifying-glass-chart.svg" alt=""
-                  loading="lazy" class="profit-3__item-image lazyload">
+                <img src="img/upline/magnifying-glass-chart.svg" alt="" loading="lazy" class="profit-3__item-image">
                 <div class="profit-3__item-content">
                   <h3 class="profit-3__item-title">Управление рисками</h3>
                   <p class="profit-3__item-text">Используйте встроенную систему хеджирования позиций для защиты от
@@ -450,8 +462,7 @@
                 </div>
               </div>
               <div class="profit-3__item">
-                <img data-src="img/upline/combi.svg" src="img/upline/combi.svg" alt="" loading="lazy"
-                  class="profit-3__item-image lazyload">
+                <img src="img/upline/combi.svg" alt="" loading="lazy" class="profit-3__item-image">
                 <div class="profit-3__item-content">
                   <h3 class="profit-3__item-title">30+ готовых торговых комбинаций</h3>
                   <p class="profit-3__item-text">Проверенные стратегии заработка на короткий срок или длительную
@@ -459,8 +470,7 @@
                 </div>
               </div>
               <div class="profit-3__item">
-                <img data-src="img/upline/hearpods.svg" src="img/upline/hearpods.svg" alt="" loading="lazy"
-                  class="profit-3__item-image lazyload">
+                <img src="img/upline/hearpods.svg" alt="" loading="lazy" class="profit-3__item-image">
                 <div class="profit-3__item-content">
                   <h3 class="profit-3__item-title">Telegram-поддержка 24/7</h3>
                   <p class="profit-3__item-text">Задавайте любые вопросы об использовании системы и отслеживайте
@@ -468,8 +478,7 @@
                 </div>
               </div>
               <div class="profit-3__item">
-                <img data-src="img/upline/rabbit-running.svg" src="img/upline/rabbit-running.svg" alt="" loading="lazy"
-                  class="profit-3__item-image lazyload">
+                <img src="img/upline/rabbit-running.svg" alt="" loading="lazy" class="profit-3__item-image">
                 <div class="profit-3__item-content">
                   <h3 class="profit-3__item-title">Мгновенные оповещения</h3>
                   <p class="profit-3__item-text">Получайте уведомления о прибыльных сигналах и совершенных сделках через
@@ -506,8 +515,17 @@
               </label>
               <button class="btn btn--offer">Запросить доступ</button>
             </form>
-            <img data-src="img/main/proc-1x.png" srcset="img/main/proc-1x.png 1x, img/main/proc-2x.png 2x" alt=""
-              loading="lazy" src="img/main/proc-1x.png" class="offer__image lazyload">
+            <picture class="offer__image">
+              <source media="(min-width: 769px)" srcset="img/main/proc-2x.png">
+              <source media="(max-width: 768px)" srcset="img/main/proc-1x.png">
+              <img src="img/main/proc-1x.png" alt="" loading="lazy">
+            </picture>
+
+            <picture class="offer__bg">
+              <source media="(min-width: 769px)" srcset="img/main/offer-bg-2x.png">
+              <source media="(max-width: 768px)" srcset="img/main/offer-bg-1x.png">
+              <img src="img/main/offer-bg-1x.png" alt="" loading="lazy">
+            </picture>
           </div>
         </div>
       </div>
@@ -525,39 +543,57 @@
             </div>
             <div class="emoji__items">
               <div class="emoji__item">
-                <img data-src="img/up" srcset="img/upline/emoji1-1x.png 1x, img/upline/emoji1-2x.png 2x" alt=""
-                  loading="lazy" src="img/upline/emoji1-1x.png" class="emoji__item-image lazyload">
+                <picture class="emoji__item-image">
+                  <source media="(min-width: 769px)" srcset="img/upline/emoji1-2x.png">
+                  <source media="(max-width: 768px)" srcset="img/upline/emoji1-1x.png">
+                  <img src="img/upline/emoji1-1x.png" alt="" loading="lazy">
+                </picture>
                 <p class="emoji__item-text">Торгует безрезультатно на протяжении длительного времени.</p>
                 <a class="emoji__item-link" href="#">Начать работу</a>
               </div>
               <div class="emoji__item">
-                <img data-src="img/up" srcset="img/upline/emoji2-1x.png 1x, img/upline/emoji2-2x.png 2x" alt=""
-                  loading="lazy" src="img/upline/emoji2-1x.png" class="emoji__item-image lazyload">
+                <picture class="emoji__item-image">
+                  <source media="(min-width: 769px)" srcset="img/upline/emoji2-2x.png">
+                  <source media="(max-width: 768px)" srcset="img/upline/emoji2-1x.png">
+                  <img src="img/upline/emoji2-1x.png" alt="" loading="lazy">
+                </picture>
                 <p class="emoji__item-text">Ищет источник дополнительного дохода.</p>
                 <a class="emoji__item-link" href="#">Начать работу</a>
               </div>
               <div class="emoji__item">
-                <img data-src="img/up" srcset="img/upline/emoji3-1x.png 1x, img/upline/emoji3-2x.png 2x" alt=""
-                  loading="lazy" src="img/upline/emoji3-1x.png" class="emoji__item-image lazyload">
+                <picture class="emoji__item-image">
+                  <source media="(min-width: 769px)" srcset="img/upline/emoji3-2x.png">
+                  <source media="(max-width: 768px)" srcset="img/upline/emoji3-1x.png">
+                  <img src="img/upline/emoji3-1x.png" alt="" loading="lazy">
+                </picture>
                 <p class="emoji__item-text">Желает изучить принципы трейдинга без риска для капитала.</p>
                 <a class="emoji__item-link" href="#">Начать работу</a>
               </div>
               <div class="emoji__item">
-                <img data-src="img/up" srcset="img/upline/emoji4-1x.png 1x, img/upline/emoji4-2x.png 2x" alt=""
-                  loading="lazy" src="img/upline/emoji4-1x.png" class="emoji__item-image lazyload">
+                <picture class="emoji__item-image">
+                  <source media="(min-width: 769px)" srcset="img/upline/emoji4-2x.png">
+                  <source media="(max-width: 768px)" srcset="img/upline/emoji4-1x.png">
+                  <img src="img/upline/emoji4-1x.png" alt="" loading="lazy">
+                </picture>
                 <p class="emoji__item-text">Мечтает полностью перейти на пассивную прибыль.</p>
                 <a class="emoji__item-link" href="#">Начать работу</a>
               </div>
               <div class="emoji__item">
-                <img data-src="img/up" srcset="img/upline/emoji5-1x.png 1x, img/upline/emoji5-2x.png 2x" alt=""
-                  loading="lazy" src="img/upline/emoji5-1x.png" class="emoji__item-image lazyload">
+                <picture class="emoji__item-image">
+                  <source media="(min-width: 769px)" srcset="img/upline/emoji5-2x.png">
+                  <source media="(max-width: 768px)" srcset="img/upline/emoji5-1x.png">
+                  <img src="img/upline/emoji5-1x.png" alt="" loading="lazy">
+                </picture>
                 <p class="emoji__item-text">Достиг весомых финансовых результатов в трейдинге и хочет упростить
                   процессы.</p>
                 <a class="emoji__item-link" href="#">Начать работу</a>
               </div>
               <div class="emoji__item">
-                <img data-src="img/up" srcset="img/upline/emoji6-1x.png 1x, img/upline/emoji6-2x.png 2x" alt=""
-                  loading="lazy" src="img/upline/emoji6-1x.png" class="emoji__item-image lazyload">
+                <picture class="emoji__item-image">
+                  <source media="(min-width: 769px)" srcset="img/upline/emoji6-2x.png">
+                  <source media="(max-width: 768px)" srcset="img/upline/emoji6-1x.png">
+                  <img src="img/upline/emoji6-1x.png" alt="" loading="lazy">
+                </picture>
                 <p class="emoji__item-text">Желает пробить финансовый потолок и выйти на новый уровень доходов.</p>
                 <a class="emoji__item-link" href="#">Начать работу</a>
               </div>
@@ -580,51 +616,81 @@
             <div class="swiper team-slider">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <img data-src="img/team/team1-1x.png" srcset="img/team/team1-1x.png 1x, img/team/team1-2x.png 2x"
-                    alt="" loading="lazy" src="img/team/team1-1x.png" class="swiper-slide__image lazyload">
-                  <div class="swiper-slide__body">
-                    <span class="team__slider-suptitle">Руководитель</span>
-                    <span class="team__slider-name">Афанасьев Борис</span>
+                  <div class="team-slider__item">
+                    <picture class="swiper-slide__image">
+                      <source media="(min-width: 769px)" srcset="img/team/team1-2x.png">
+                      <source media="(max-width: 768px)" srcset="img/team/team1-1x.png">
+                      <img src="img/team/team1-1x.png" alt="" loading="lazy">
+                    </picture>
+                    <div class="swiper-slide__body">
+                      <span class="team__slider-suptitle">Руководитель</span>
+                      <span class="team__slider-name">Афанасьев Борис</span>
+                    </div>
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <img data-src="img/team/team2-1x.png" srcset="img/team/team2-1x.png 1x, img/team/team2-2x.png 2x"
-                    alt="" loading="lazy" src="img/team/team2-1x.png" class="swiper-slide__image lazyload">
-                  <div class="swiper-slide__body">
-                    <span class="team__slider-suptitle">Ведущий разработчик</span>
-                    <span class="team__slider-name">Афанасьев Борис</span>
+                  <div class="team-slider__item">
+                    <picture class="swiper-slide__image">
+                      <source media="(min-width: 769px)" srcset="img/team/team2-2x.png">
+                      <source media="(max-width: 768px)" srcset="img/team/team2-1x.png">
+                      <img src="img/team/team2-1x.png" alt="" loading="lazy">
+                    </picture>
+                    <div class="swiper-slide__body">
+                      <span class="team__slider-suptitle">Ведущий разработчик</span>
+                      <span class="team__slider-name">Афанасьев Борис</span>
+                    </div>
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <img data-src="img/team/team3-1x.png" srcset="img/team/team3-1x.png 1x, img/team/team3-2x.png 2x"
-                    alt="" loading="lazy" src="img/team/team3-1x.png" class="swiper-slide__image lazyload">
-                  <div class="swiper-slide__body">
-                    <span class="team__slider-suptitle">Разработчик</span>
-                    <span class="team__slider-name">Афанасьев Борис</span>
+                  <div class="team-slider__item">
+                    <picture class="swiper-slide__image">
+                      <source media="(min-width: 769px)" srcset="img/team/team3-2x.png">
+                      <source media="(max-width: 768px)" srcset="img/team/team3-1x.png">
+                      <img src="img/team/team3-1x.png" alt="" loading="lazy">
+                    </picture>
+                    <div class="swiper-slide__body">
+                      <span class="team__slider-suptitle">Разработчик</span>
+                      <span class="team__slider-name">Афанасьев Борис</span>
+                    </div>
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <img data-src="img/team/team4-1x.png" srcset="img/team/team4-1x.png 1x, img/team/team4-2x.png 2x"
-                    alt="" loading="lazy" src="img/team/team4-1x.png" class="swiper-slide__image lazyload">
-                  <div class="swiper-slide__body">
-                    <span class="team__slider-suptitle">Старший менеджер</span>
-                    <span class="team__slider-name">Афанасьев Борис</span>
+                  <div class="team-slider__item">
+                    <picture class="swiper-slide__image">
+                      <source media="(min-width: 769px)" srcset="img/team/team4-2x.png">
+                      <source media="(max-width: 768px)" srcset="img/team/team4-1x.png">
+                      <img src="img/team/team4-1x.png" alt="" loading="lazy">
+                    </picture>
+                    <div class="swiper-slide__body">
+                      <span class="team__slider-suptitle">Старший менеджер</span>
+                      <span class="team__slider-name">Афанасьев Борис</span>
+                    </div>
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <img data-src="img/team/team5-1x.png" srcset="img/team/team5-1x.png 1x, img/team/team5-2x.png 2x"
-                    alt="" loading="lazy" src="img/team/team5-1x.png" class="swiper-slide__image lazyload">
-                  <div class="swiper-slide__body">
-                    <span class="team__slider-suptitle">Менеджер продаж</span>
-                    <span class="team__slider-name">Афанасьев Борис</span>
+                  <div class="team-slider__item">
+                    <picture class="swiper-slide__image">
+                      <source media="(min-width: 769px)" srcset="img/team/team5-2x.png">
+                      <source media="(max-width: 768px)" srcset="img/team/team5-1x.png">
+                      <img src="img/team/team5-1x.png" alt="" loading="lazy">
+                    </picture>
+                    <div class="swiper-slide__body">
+                      <span class="team__slider-suptitle">Менеджер продаж</span>
+                      <span class="team__slider-name">Афанасьев Борис</span>
+                    </div>
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <img data-src="img/team/team1-1x.png" srcset="img/team/team1-1x.png 1x, img/team/team1-2x.png 2x"
-                    alt="" loading="lazy" src="img/team/team-1x.png" class="swiper-slide__image lazyload">
-                  <div class="swiper-slide__body">
-                    <span class="team__slider-suptitle">Руководитель</span>
-                    <span class="team__slider-name">Афанасьев Борис</span>
+                  <div class="team-slider__item">
+                    <picture class="swiper-slide__image">
+                      <source media="(min-width: 769px)" srcset="img/team/team1-2x.png">
+                      <source media="(max-width: 768px)" srcset="img/team/team1-1x.png">
+                      <img src="img/team/team1-1x.png" alt="" loading="lazy">
+                    </picture>
+                    <div class="swiper-slide__body">
+                      <span class="team__slider-suptitle">Руководитель</span>
+                      <span class="team__slider-name">Афанасьев Борис</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -738,8 +804,11 @@
                 <div class="swiper-slide">
                   <div class="tarif-slide">
                     <div class="tarif-slide__head">
-                      <img data-src="img/upline/demo1x.png" srcset="img/upline/demo1x.png 1x, img/upline/demo2x.png 2x"
-                        alt="" loading="lazy" src="img/upline/demo1x.png" class="tarif-slide__image lazyload">
+                      <picture class="tarif-slide__image">
+                        <source media="(min-width: 769px)" srcset="img/upline/demo2x.png">
+                        <source media="(max-width: 768px)" srcset="img/upline/demo1x.png">
+                        <img src="img/upline/demo1x.png" alt="" loading="lazy">
+                      </picture>
                       <div class="tarif-slide__block">
                         <span class="tarif-slide__suptitle">Тариф</span>
                         <span class="tarif-slide__title">Demo</span>
@@ -778,9 +847,11 @@
                 <div class="swiper-slide">
                   <div class="tarif-slide">
                     <div class="tarif-slide__head">
-                      <img data-src="img/upline/start1x.png"
-                        srcset="img/upline/start1x.png 1x, img/upline/start2x.png 2x" alt="" loading="lazy"
-                        src="img/upline/start1x.png" class="tarif-slide__image lazyload">
+                      <picture class="tarif-slide__image">
+                        <source media="(min-width: 769px)" srcset="img/upline/start2x.png">
+                        <source media="(max-width: 768px)" srcset="img/upline/start1x.png">
+                        <img src="img/upline/start1x.png" alt="" loading="lazy">
+                      </picture>
                       <div class="tarif-slide__block">
                         <span class="tarif-slide__suptitle">Тариф</span>
                         <span class="tarif-slide__title">Start</span>
@@ -826,9 +897,11 @@
                     </div>
 
                     <div class="tarif-slide__head">
-                      <img data-src="img/upline/basic1x.png"
-                        srcset="img/upline/basic1x.png 1x, img/upline/basic2x.png 2x" alt="" loading="lazy"
-                        src="img/upline/basic1x.png" class="tarif-slide__image lazyload">
+                      <picture class="tarif-slide__image">
+                        <source media="(min-width: 769px)" srcset="img/upline/basic2x.png">
+                        <source media="(max-width: 768px)" srcset="img/upline/basic1x.png">
+                        <img src="img/upline/basic1x.png" alt="" loading="lazy">
+                      </picture>
                       <div class="tarif-slide__block">
                         <span class="tarif-slide__suptitle">Тариф</span>
                         <span class="tarif-slide__title">Basic</span>
@@ -870,9 +943,11 @@
                 <div class="swiper-slide">
                   <div class="tarif-slide">
                     <div class="tarif-slide__head">
-                      <img data-src="img/upline/Advanced1x.png"
-                        srcset="img/upline/Advanced1x.png 1x, img/upline/Advanced2x.png 2x" alt="" loading="lazy"
-                        src="img/upline/Advanced1x.png" class="tarif-slide__image lazyload">
+                      <picture class="tarif-slide__image">
+                        <source media="(min-width: 769px)" srcset="img/upline/Advanced2x.png">
+                        <source media="(max-width: 768px)" srcset="img/upline/Advanced1x.png">
+                        <img src="img/upline/Advanced1x.png" alt="" loading="lazy">
+                      </picture>
                       <div class="tarif-slide__block">
                         <span class="tarif-slide__suptitle">Тариф</span>
                         <span class="tarif-slide__title">Demo</span>
@@ -915,9 +990,11 @@
                 <div class="swiper-slide">
                   <div class="tarif-slide">
                     <div class="tarif-slide__head">
-                      <img data-src="img/upline/premium1x.png"
-                        srcset="img/upline/premium1x.png 1x, img/upline/premium2x.png 2x" alt="" loading="lazy"
-                        src="img/upline/premium1x.png" class="tarif-slide__image lazyload">
+                      <picture class="tarif-slide__image">
+                        <source media="(min-width: 769px)" srcset="img/upline/premium2x.png">
+                        <source media="(max-width: 768px)" srcset="img/upline/premium1x.png">
+                        <img src="img/upline/premium1x.png" alt="" loading="lazy">
+                      </picture>
                       <div class="tarif-slide__block">
                         <span class="tarif-slide__suptitle">Тариф</span>
                         <span class="tarif-slide__title">Premium</span>
@@ -982,8 +1059,11 @@
 
                 <div class="swiper-slide">
                   <div class="case">
-                    <img data-src="img/upline/case1x.jpg" srcset="img/upline/case1x.jpg 1x, img/upline/case2x.jpg 2x"
-                      alt="" loading="lazy" src="img/upline/case1x.jpg" class="case__image lazyload">
+                    <picture class="case__image">
+                      <source media="(min-width: 769px)" srcset="img/upline/case2x.jpg">
+                      <source media="(max-width: 768px)" srcset="img/upline/case1x.jpg">
+                      <img src="img/upline/case1x.jpg" alt="" loading="lazy">
+                    </picture>
                     <div class=" swiper-lazy-preloader"></div>
                     <div class="case__body">
                       <h3 class="case__body-title">Повышение доходности трейдинга</h3>
@@ -1026,8 +1106,11 @@
 
                 <div class="swiper-slide">
                   <div class="case">
-                    <img data-src="img/upline/case1x.jpg" srcset="img/upline/case1x.jpg 1x, img/upline/case2x.jpg 2x"
-                      alt="" loading="lazy" src="img/upline/case1x.jpg" class="case__image lazyload">
+                    <picture class="case__image">
+                      <source media="(min-width: 769px)" srcset="img/upline/case2x.jpg">
+                      <source media="(max-width: 768px)" srcset="img/upline/case1x.jpg">
+                      <img src="img/upline/case1x.jpg" alt="" loading="lazy">
+                    </picture>
                     <div class=" swiper-lazy-preloader"></div>
                     <div class="case__body">
                       <h3 class="case__body-title">Повышение доходности трейдинга</h3>
@@ -1070,8 +1153,11 @@
 
                 <div class="swiper-slide">
                   <div class="case">
-                    <img data-src="img/upline/case1x.jpg" srcset="img/upline/case1x.jpg 1x, img/upline/case2x.jpg 2x"
-                      alt="" loading="lazy" src="img/upline/case1x.jpg" class="case__image lazyload">
+                    <picture class="case__image">
+                      <source media="(min-width: 769px)" srcset="img/upline/case2x.jpg">
+                      <source media="(max-width: 768px)" srcset="img/upline/case1x.jpg">
+                      <img src="img/upline/case1x.jpg" alt="" loading="lazy">
+                    </picture>
                     <div class=" swiper-lazy-preloader"></div>
                     <div class="case__body">
                       <h3 class="case__body-title">Повышение доходности трейдинга</h3>
@@ -1137,8 +1223,11 @@
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <div class="reviews__slide">
-                    <img data-src="img/upline/rev1x.jpg" srcset="img/upline/rev1x.jpg 1x, img/upline/rev2x.jpg 2x"
-                      alt="" loading="lazy" src="img/upline/rev1x.jpg" class="reviews__slide-image lazyload">
+                    <picture class="reviews__slide-image">
+                      <source media="(min-width: 769px)" srcset="img/upline/rev2x.jpg">
+                      <source media="(max-width: 768px)" srcset="img/upline/rev1x.jpg">
+                      <img src="img/upline/rev1x.jpg" alt="" loading="lazy">
+                    </picture>
                     <div class="reviews__slide-type reviews__video"><span class="icon-play"></span>Видео-отзыв</div>
                     <div class="reviews__slide-body">
                       <div class="reviews__slide-content">
@@ -1151,8 +1240,11 @@
                 </div>
                 <div class="swiper-slide">
                   <div class="reviews__slide">
-                    <img data-src="img/upline/rev4-2x.png" srcset="img/upline/rev4-1x.png 1x, img/upline/rev4-2x.png 2x"
-                      alt="" loading="lazy" src="img/upline/rev4-2x.png" class="reviews__slide-image lazyload">
+                    <picture class="reviews__slide-image">
+                      <source media="(min-width: 769px)" srcset="img/upline/rev4-2x.png">
+                      <source media="(max-width: 768px)" srcset="img/upline/rev4-1x.png">
+                      <img src="img/upline/rev4-1x.png" alt="" loading="lazy">
+                    </picture>
                     <div class="reviews__slide-type reviews__txt"><span class="icon-txt"></span>Текстовый отзыв</div>
                     <div class="reviews__slide-body">
                       <div class="reviews__slide-content">
@@ -1165,9 +1257,11 @@
                 </div>
                 <div class="swiper-slide">
                   <div class="reviews__slide">
-                    <img data-src="img/upline/rev2-1x.jpg" srcset="img/upline/rev2-1x.jpg 1x, img/upline/rev2-2x.jpg 2x"
-                      alt="" loading="lazy" src="img/upline/rev2-1x.jpg" class="reviews__slide-image lazyload">
-
+                    <picture class="reviews__slide-image">
+                      <source media="(min-width: 769px)" srcset="img/upline/rev2-2x.jpg">
+                      <source media="(max-width: 768px)" srcset="img/upline/rev2-1x.jpg">
+                      <img src="img/upline/rev2-1x.jpg" alt="" loading="lazy">
+                    </picture>
                     <div class="reviews__slide-type reviews__official"><span class="icon-doc"></span>Официальный отзыв
                     </div>
                     <div class="reviews__slide-body">
@@ -1181,8 +1275,11 @@
                 </div>
                 <div class="swiper-slide">
                   <div class="reviews__slide">
-                    <img data-src="img/upline/rev3-1x.jpg" srcset="img/upline/rev3-1x.jpg 1x, img/upline/rev3-2x.jpg 2x"
-                      alt="" loading="lazy" src="img/upline/rev3-1x.jpg" class="reviews__slide-image lazyload">
+                    <picture class="reviews__slide-image">
+                      <source media="(min-width: 769px)" srcset="img/upline/rev3-2x.jpg">
+                      <source media="(max-width: 768px)" srcset="img/upline/rev3-1x.jpg">
+                      <img src="img/upline/rev3-1x.jpg" alt="" loading="lazy">
+                    </picture>
                     <div class="reviews__slide-type reviews__audio"><span class="icon-micro"></span>Аудио-отзыв</div>
                     <div class="reviews__slide-body">
                       <div class="reviews__slide-content">
@@ -1195,8 +1292,11 @@
                 </div>
                 <div class="swiper-slide">
                   <div class="reviews__slide">
-                    <img data-src="img/upline/rev4-2x.png" srcset="img/upline/rev4-2x.png 1x, img/upline/rev4-2x.png 2x"
-                      alt="" loading="lazy" src="img/upline/rev4-2x.png" class="reviews__slide-image lazyload">
+                    <picture class="reviews__slide-image">
+                      <source media="(min-width: 769px)" srcset="img/upline/rev4-2x.png">
+                      <source media="(max-width: 768px)" srcset="img/upline/rev4-1x.png">
+                      <img src="img/upline/rev4-1x.png" alt="" loading="lazy">
+                    </picture>
                     <div class="reviews__slide-type reviews__social"><span class="icon-like"></span>Отзыв из соц. сетей
                     </div>
                     <div class="reviews__slide-body">
@@ -1241,8 +1341,16 @@
               </label>
               <button class="btn btn--offer">Подключить робота</button>
             </form>
-            <img data-src="img/upline/rocket-1x.png" srcset="img/upline/rocket-1x.png 1x, img/upline/rocket-2x.png 2x"
-              alt="" loading="lazy" src="img/upline/rocket-1x.png" class="offer__image lazyload">
+            <picture class="offer__image">
+              <source media="(min-width: 769px)" srcset="img/upline/rocket-2x.png">
+              <source media="(max-width: 768px)" srcset="img/upline/rocket-1x.png">
+              <img src="img/upline/rocket-1x.png" alt="" loading="lazy">
+            </picture>
+            <picture class="offer__bg">
+              <source media="(min-width: 769px)" srcset="img/main/offer-bg2-2x.png">
+              <source media="(max-width: 768px)" srcset="img/main/offer-bg2-1x.png">
+              <img src="img/main/offer-bg2-1x.png" alt="" loading="lazy">
+            </picture>
           </div>
         </div>
       </div>
@@ -1255,7 +1363,11 @@
 
           <div class="footer__content">
             <a href="/" class="logo">
-              <img data-src="img/logo.svg" alt="" loading="lazy" src="img/logo.svg" class="logo__img lazyload">
+              <picture class="logo__img">
+                <source media="(min-width: 769px)" srcset="img/logo-x2.png">
+                <source media="(max-width: 768px)" srcset="img/logo-x1.png">
+                <img src="img/logo-x1.png" alt="" loading="lazy">
+              </picture>
             </a>
 
             <nav class="nav">
@@ -1440,8 +1552,11 @@
       <a class="cancel" href="#"></a>
       <div class="modal modal-finish">
         <a class="close icon-plus" href="#"></a>
-        <img data-src="img/envelope_front1x.png" srcset="img/envelope_front1x.png, img/envelope_front2x.png 2x" alt=""
-          loading="lazy" src="img/envelope_front1x.png" class="modal__finish-img lazyload">
+        <picture class="modal__finish-img">
+          <source media="(min-width: 769px)" srcset="img/envelope_front2x.png">
+          <source media="(max-width: 768px)" srcset="img/envelope_front1x.png">
+          <img src="img/envelope_front1x.png" alt="" loading="lazy">
+        </picture>
 
         <div class="modal__top">
           <div class="modal__title">Результаты тест готовы!</div>
@@ -1489,9 +1604,11 @@
       <a class="cancel" href="#"></a>
       <div class="modal modal-finish">
         <a class="close icon-plus" href="#"></a>
-        <img data-src="img/envelope_front1x.png" srcset="img/envelope_front1x.png, img/envelope_front2x.png 2x" alt=""
-          loading="lazy" src="img/envelope_front1x.png" class="modal__finish-img lazyload">
-
+        <picture class="modal__finish-img">
+          <source media="(min-width: 769px)" srcset="img/envelope_front2x.png">
+          <source media="(max-width: 768px)" srcset="img/envelope_front1x.png">
+          <img src="img/envelope_front1x.png" alt="" loading="lazy">
+        </picture>
         <div class="modal__top">
           <div class="modal__title">Ваша заявка отправлена!</div>
           <div class="modal__subtitle">Спасибо! Ваши результаты готовы и были отправлены на ваш почтовый ящик</div>

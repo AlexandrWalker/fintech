@@ -36,7 +36,11 @@
           </button>
 
           <a href="/" class="logo">
-            <img data-src="img/logo.svg" alt="" loading="lazy" src="img/logo.svg" class="logo__img lazyload">
+            <picture class="logo__img">
+              <source media="(min-width: 769px)" srcset="img/logo-x2.png">
+              <source media="(max-width: 768px)" srcset="img/logo-x1.png">
+              <img src="img/logo-x1.png" alt="" loading="lazy">
+            </picture>
           </a>
 
           <nav class="nav" id="nav">
@@ -167,7 +171,11 @@
 
           <div class="footer__content">
             <a href="/" class="logo">
-              <img data-src="img/logo.svg" alt="" loading="lazy" src="img/logo.svg" class="logo__img lazyload">
+              <picture class="logo__img">
+                <source media="(min-width: 769px)" srcset="img/logo-x2.png">
+                <source media="(max-width: 768px)" srcset="img/logo-x1.png">
+                <img src="img/logo-x1.png" alt="" loading="lazy">
+              </picture>
             </a>
 
             <nav class="nav">
@@ -352,8 +360,11 @@
       <a class="cancel" href="#"></a>
       <div class="modal modal-finish">
         <a class="close icon-plus" href="#"></a>
-        <img data-src="img/envelope_front1x.png" srcset="img/envelope_front1x.png, img/envelope_front2x.png 2x" alt=""
-          loading="lazy" src="img/envelope_front1x.png" class="modal__finish-img lazyload">
+        <picture class="modal__finish-img">
+          <source media="(min-width: 769px)" srcset="img/envelope_front2x.png">
+          <source media="(max-width: 768px)" srcset="img/envelope_front1x.png">
+          <img src="img/envelope_front1x.png" alt="" loading="lazy">
+        </picture>
 
         <div class="modal__top">
           <div class="modal__title">Результаты тест готовы!</div>
@@ -401,9 +412,11 @@
       <a class="cancel" href="#"></a>
       <div class="modal modal-finish">
         <a class="close icon-plus" href="#"></a>
-        <img data-src="img/envelope_front1x.png" srcset="img/envelope_front1x.png, img/envelope_front2x.png 2x" alt=""
-          loading="lazy" src="img/envelope_front1x.png" class="modal__finish-img lazyload">
-
+        <picture class="modal__finish-img">
+          <source media="(min-width: 769px)" srcset="img/envelope_front2x.png">
+          <source media="(max-width: 768px)" srcset="img/envelope_front1x.png">
+          <img src="img/envelope_front1x.png" alt="" loading="lazy">
+        </picture>
         <div class="modal__top">
           <div class="modal__title">Ваша заявка отправлена!</div>
           <div class="modal__subtitle">Спасибо! Ваши результаты готовы и были отправлены на ваш почтовый ящик</div>
