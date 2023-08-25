@@ -3021,7 +3021,7 @@ main {
   line-height: 170%;
 }
 
-.case__item-list {
+.case__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3032,7 +3032,7 @@ main {
   gap: 5px;
 }
 
-.case__item-item {
+.case__list-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3042,7 +3042,7 @@ main {
   gap: 10px;
 }
 
-.case__item-item::before {
+.case__list-item::before {
   content: "";
   width: 10px;
   height: 2px;
