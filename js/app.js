@@ -126,7 +126,7 @@ burgerBtn.onclick = function () {
 };
 
 /* Anchor */
-const anchors = document.querySelectorAll('a[href*="#"]')
+const anchors = nav.querySelectorAll('a[href*="#"]')
 for (let anchor of anchors) {
   anchor.addEventListener('click', function (e) {
     e.preventDefault()
@@ -166,6 +166,18 @@ const telSelector3 = form3.querySelector('input[type="tel"]');
 const inputMask3 = new Inputmask('+7 (999) 999-99-99');
 inputMask3.mask(telSelector3);
 const validation3 = new JustValidate('.form3');
+
+const form4 = document.querySelector('.form4');
+const telSelector4 = form4.querySelector('input[type="tel"]');
+const inputMask4 = new Inputmask('+7 (999) 999-99-99');
+inputMask4.mask(telSelector4);
+const validation4 = new JustValidate('.form4');
+
+const form5 = document.querySelector('.form5');
+const telSelector5 = form5.querySelector('input[type="tel"]');
+const inputMask5 = new Inputmask('+7 (999) 999-99-99');
+inputMask5.mask(telSelector5);
+const validation5 = new JustValidate('.form5');
 
 validation
   .addField('.input-name', [
@@ -254,8 +266,8 @@ validation2
     {
       rule: 'function',
       validator: function () {
-        const phone = telSelector2.inputmask.unmaskedvalue();
-        return phone.length === 10;
+        const phone2 = telSelector2.inputmask.unmaskedvalue();
+        return phone2.length === 10;
       },
       errorMessage: ' ',
     },
@@ -312,8 +324,122 @@ validation3
     {
       rule: 'function',
       validator: function () {
-        const phone = telSelector.inputmask.unmaskedvalue();
-        return phone.length === 10;
+        const phone3 = telSelector3.inputmask.unmaskedvalue();
+        return phone3.length === 10;
+      },
+      errorMessage: ' ',
+    },
+  ]).onSuccess((event) => {
+    console.log('Validation passes and form submitted', event);
+
+    let formData = new FormData(event.target);
+
+    console.log(...formData);
+
+    let xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          console.log('Отправлено');
+        }
+      }
+    }
+
+    xhr.open('POST', 'mail.php', true);
+    xhr.send(formData);
+
+    event.target.reset();
+  });
+
+validation4
+  .addField('.input-name4', [
+    {
+      rule: 'required',
+      value: true,
+      errorMessage: ' '
+    }
+  ])
+  .addField('.input-mail4', [
+    {
+      rule: 'required',
+      value: true,
+      errorMessage: ' ',
+    },
+    {
+      rule: 'email',
+      value: true,
+      errorMessage: ' ',
+    },
+  ])
+  .addField('.input-tel4', [
+    {
+      rule: 'required',
+      value: true,
+      errorMessage: ' ',
+    },
+    {
+      rule: 'function',
+      validator: function () {
+        const phone4 = telSelector4.inputmask.unmaskedvalue();
+        return phone4.length === 10;
+      },
+      errorMessage: ' ',
+    },
+  ]).onSuccess((event) => {
+    console.log('Validation passes and form submitted', event);
+
+    let formData = new FormData(event.target);
+
+    console.log(...formData);
+
+    let xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          console.log('Отправлено');
+        }
+      }
+    }
+
+    xhr.open('POST', 'mail.php', true);
+    xhr.send(formData);
+
+    event.target.reset();
+  });
+
+validation5
+  .addField('.input-name5', [
+    {
+      rule: 'required',
+      value: true,
+      errorMessage: ' '
+    }
+  ])
+  .addField('.input-mail5', [
+    {
+      rule: 'required',
+      value: true,
+      errorMessage: ' ',
+    },
+    {
+      rule: 'email',
+      value: true,
+      errorMessage: ' ',
+    },
+  ])
+  .addField('.input-tel5', [
+    {
+      rule: 'required',
+      value: true,
+      errorMessage: ' ',
+    },
+    {
+      rule: 'function',
+      validator: function () {
+        const phone5 = telSelector5.inputmask.unmaskedvalue();
+        return phone5.length === 10;
       },
       errorMessage: ' ',
     },

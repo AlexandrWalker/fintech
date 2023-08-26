@@ -320,6 +320,10 @@ main {
   z-index: 101;
 }
 
+.logo__img img {
+  height: auto;
+}
+
 .nav {
   width: 100%;
   -webkit-transition: all 0.3s linear;
@@ -3546,6 +3550,17 @@ main {
 .modal__image {
   width: auto;
   height: 80vh;
+}
+
+#calculator-3 .offer__form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+#calculator-3 .modal__inputs {
+  display: flex;
+  gap: 15px;
 }
 
 #calculator-finish .modal__title,
