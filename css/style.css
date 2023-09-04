@@ -589,7 +589,7 @@ main {
   padding: 0;
 }
 
-.hero .glow--1 {
+/* .hero .glow--1 {
   position: absolute;
   top: 223px;
   left: 53px;
@@ -727,7 +727,7 @@ main {
   -webkit-transform: rotate(22deg);
   -ms-transform: rotate(22deg);
   transform: rotate(22deg);
-}
+} */
 
 .hero__inner {
   display: -webkit-box;
@@ -935,7 +935,7 @@ main {
   margin-right: 109px;
 }
 
-.capital__image:before {
+/* .capital__image:before {
   content: "";
   position: absolute;
   left: -50%;
@@ -967,7 +967,7 @@ main {
   background: var(--main, #FCD535);
   -webkit-filter: blur(150px);
   filter: blur(150px);
-}
+} */
 
 /* Trade */
 .trade {
@@ -1028,7 +1028,7 @@ main {
   width: 100%;
 }
 
-.trade__image:before {
+/* .trade__image:before {
   content: "";
   position: absolute;
   right: -50%;
@@ -1060,7 +1060,7 @@ main {
   background: var(--main, #FCD535);
   -webkit-filter: blur(150px);
   filter: blur(150px);
-}
+} */
 
 /* Profit */
 .profit-2 {
@@ -1141,7 +1141,7 @@ main {
   transform: translateY(-50%);
 }
 
-.profit-2__item:before {
+/* .profit-2__item:before {
   content: "";
   position: absolute;
   top: 121px;
@@ -1174,7 +1174,7 @@ main {
   opacity: 0.1;
   -webkit-filter: blur(100px);
   filter: blur(100px);
-}
+} */
 
 /* Offer */
 .offer {
