@@ -87,15 +87,15 @@ var swiper = new Swiper(".cases-slider", {
 
 /* Accordion */
 (function () {
-  var accordionItem = document.querySelectorAll('.accordion__title'),
-    active = document.getElementsByClassName('accordion__active');
+  var accordionItem = document.querySelectorAll('.accordion__item'),
+    active = document.getElementsByClassName('active');
 
   Array.from(accordionItem).forEach(function (item, i, accordionItem) {
     item.addEventListener('click', function (e) {
       if (active.length > 0 && active[0] !== this)
-        active[0].classList.remove('accordion__active');
+        active[0].classList.remove('active');
 
-      this.classList.toggle('accordion__active');
+      this.classList.toggle('active');
     });
   });
 })();
@@ -465,3 +465,57 @@ validation5
 
     event.target.reset();
   });
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////*/
+
+const modalBTN = document.querySelectorAll('[data-modal]');
+const body = document.body;
+const modalClose = document.querySelectorAll('.modals_close');
+const modal = document.querySelectorAll('.modals');
+
+modalBTN.forEach(item => {
+  item.addEventListener('click', event => {
+    let $this = event.currentTarget;
+    let modalID = $this.getAttribute('data-modal');
+    let modal = document.getElementById(modalID);
+    let modalContent = modal.querySelector('.modals_content');
+
+    modalContent.addEventListener('click', event => {
+      event.stopPropagation();
+    });
+
+    modal.classList.add('show');
+    body.classList.add('no-scroll');
+
+    setTimeout(() => {
+      modalContent.style.transform = 'none';
+      modalContent.style.opacity = '1';
+    });
+  }, 1);
+});
+
+modalClose.forEach(item => {
+  item.addEventListener('click', event => {
+    let currentModal = event.currentTarget.closest('.modals');
+
+    closeModal(currentModal);
+  });
+});
+
+modal.forEach(item => {
+  item.addEventListener('click', event => {
+    let currentModal = event.currentTarget;
+
+    closeModal(currentModal);
+  });
+});
+
+function closeModal(currentModal) {
+  let modalContent = currentModal.querySelector('.modals_content');
+  modalContent.removeAttribute('style');
+
+  setTimeout(() => {
+    currentModal.classList.remove('show');
+    body.classList.remove('no-scroll');
+  }, 200);
+}
