@@ -103,7 +103,7 @@ main {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 100%;
+  min-height: 100vh;
   overflow: hidden;
 }
 
@@ -3113,32 +3113,7 @@ main {
   height: 1013px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Modals */
 .modals {
   display: none;
   flex-direction: column;
