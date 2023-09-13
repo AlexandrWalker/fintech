@@ -473,12 +473,16 @@ const body = document.body;
 const modalClose = document.querySelectorAll('.modals_close');
 const modal = document.querySelectorAll('.modals');
 
+const modalTitle = document.querySelector('#modal-title');
+const modalBtn = document.querySelector('#modal-btn');
+
 modalBTN.forEach(item => {
   item.addEventListener('click', event => {
     let $this = event.currentTarget;
     let modalID = $this.getAttribute('data-modal');
     let modal = document.getElementById(modalID);
     let modalContent = modal.querySelector('.modals_content');
+    // let modalTitle = document.querySelector('#modal-title');
 
     modalContent.addEventListener('click', event => {
       event.stopPropagation();
@@ -486,6 +490,8 @@ modalBTN.forEach(item => {
 
     modal.classList.add('show');
     body.classList.add('no-scroll');
+    modalTitle.innerHTML = "Заказать звонок";
+    modalBtn.innerHTML = "Заказать звонок";
 
     setTimeout(() => {
       modalContent.style.transform = 'none';
@@ -519,3 +525,10 @@ function closeModal(currentModal) {
     body.classList.remove('no-scroll');
   }, 200);
 }
+
+let popupTarif = document.querySelector('[data-tarif]');
+
+popupTarif.onclick = function () {
+  modalTitle.innerHTML = "Заказать тариф";
+  modalBtn.innerHTML = "Заказать тариф";
+};

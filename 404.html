@@ -16,11 +16,13 @@
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
   <!-- Style -->
-  <link rel="stylesheet" href="css/normalize.css?v=1">
-  <link rel="stylesheet" href="fonts/Inter/stylesheet.css?v=1">
-  <link rel="stylesheet" href="libs/swiper-bundle.min.css?v=1">
-  <link rel="stylesheet" href="css/icons.css?v=1">
-  <link rel="stylesheet" href="css/style.css?v=1">
+  <link rel="stylesheet" href="css/normalize.css?v=2">
+  <link rel="stylesheet" href="fonts/Inter/stylesheet.css?v=2">
+  <link rel="stylesheet" href="libs/swiper-bundle.min.css?v=2">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css?v=2">
+  <link rel="stylesheet" href="css/icons.css?v=2">
+  <link rel="stylesheet" href="css/style.css?v=2">
   <title>FINTECH</title>
 </head>
 
@@ -330,13 +332,13 @@
       </div>
     </div>
 
-    <div id="popup-1" class="overlay back">
-      <a class="cancel" href="#!"></a>
-      <div class="modal">
-        <a class="close icon-plus" href="#!"></a>
-
+    <div class="modals" id="popup-1">
+      <div class="modals_content">
+        <button class="modals_close" type="button">
+          <img class="modals_close-img" src="img/close.svg" alt="Закрыть">
+        </button>
         <div class="modal__top">
-          <div class="modal__title">Заказать звонок</div>
+          <div class="modal__title" id="modal-title">Заказать звонок</div>
           <div class="modal__subtitle">Укажите ваши актуальные данные, мы свяжемся с вами в течении 15 минут</div>
         </div>
         <div class="modal__question">
@@ -353,19 +355,19 @@
               <input class="input input-mail3 offer__form-input" type="email" data-validate-field="email" name="Email"
                 placeholder="Ваш E-mail">
             </label>
-
             <div class="modal__btns">
-              <button class="btn modal__btn modal__btn-y" type="submit">Заказать звонок</button>
+              <button class="btn modal__btn modal__btn-y" type="submit" id="modal-btn">Заказать звонок</button>
             </div>
           </form>
         </div>
-
       </div>
     </div>
-    <div id="popup-finish" class="overlay back">
-      <a class="cancel" href="#!"></a>
-      <div class="modal modal-finish">
-        <a class="close icon-plus" href="#!"></a>
+
+    <div class="modals" id="popup-finish">
+      <div class="modals_content modal-finish">
+        <button class="modals_close" type="button">
+          <img class="modals_close-img" src="img/close.svg" alt="Закрыть">
+        </button>
         <picture class="modal__finish-img">
           <source media="(min-width: 769px)" srcset="img/envelope_front2x.png">
           <source media="(max-width: 768px)" srcset="img/envelope_front1x.png">
@@ -376,7 +378,7 @@
           <div class="modal__subtitle">Спасибо! Ваши результаты готовы и были отправлены на ваш почтовый ящик</div>
         </div>
         <div class="modal__btns">
-          <a class="btn modal__btn modal__btn-y" href="#">Вернуться на главную</a>
+          <a class="btn modal__btn modal__btn-y" href="/">Вернуться на главную</a>
         </div>
       </div>
     </div>
@@ -438,10 +440,13 @@
 
   </div>
   <!-- JS -->
-  <script defer src="libs/swiper-bundle.min.js?v=1"></script>
-  <script defer src="libs/inputmask.min.js?v=1"></script>
-  <script defer src="libs/just-validate3.3.3.min.js?v=1"></script>
-  <script defer src="js/app.js?v=1"></script>
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  <script defer src="libs/swiper-bundle.min.js"></script>
+  <script defer src="libs/inputmask.min.js"></script>
+  <script defer src="libs/just-validate3.3.3.min.js"></script>
+  <script defer src="js/app.js?v=2"></script>
 </body>
 
 </html>

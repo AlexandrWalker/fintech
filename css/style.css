@@ -800,6 +800,7 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  filter: blur(15px);
 }
 
 /* Trade */
@@ -859,7 +860,9 @@ main {
   top: 33px;
   margin-left: 112px;
   max-width: 343px;
+  /* max-width: 860px; */
   width: 100%;
+  /* margin: -160px 0 0 -210px; */
 }
 
 .trade__image::before {
@@ -877,6 +880,7 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  filter: blur(15px);
 }
 
 /* Profit */
@@ -3196,6 +3200,12 @@ main {
 
   border-radius: 50%;
   border: 1px solid var(--sep, #363840);
+  transition: all 0.2s;
+}
+
+.modals_content .modals_close:hover {
+  background: var(--main);
+  transition: all 0.2s;
 }
 
 .modals_close-img {
@@ -3474,28 +3484,6 @@ main {
   width: 536px;
   padding: 180px 60px 50px 60px;
   text-align: center;
-}
-
-#certificate .modal {
-  padding: 0;
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-}
-
-#certificate .modal .close {
-  z-index: 2;
-}
-
-.modal__image {
-  width: auto;
-  height: 80vh;
-  position: relative;
-}
-
-#certificate .modal__image img {
-  position: relative;
-  z-index: 1;
 }
 
 #calculator-3 .offer__form {
