@@ -3158,6 +3158,7 @@ main {
   flex-direction: column;
   gap: 40px;
 }
+
 /* 
 .modals.show .modals_content {
   opacity: 1;
@@ -3496,7 +3497,7 @@ main {
 
 #popup-1 .modals_content,
 #popup-8 .modals_content {
-  width: 536px;
+  max-width: 536px;
 }
 
 #popup-1 .offer__form-label,
@@ -4639,5 +4640,10 @@ main {
     width: 291px;
     height: auto;
     top: 49%;
+  }
+
+  #popup-1 .modals_content,
+  #popup-8 .modals_content {
+    padding: 50px 20px;
   }
 }
