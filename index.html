@@ -39,9 +39,9 @@
 
           <a href="/" class="logo">
             <picture class="logo__img">
-              <source media="(min-width: 769px)" srcset="img/logo-x2.png">
-              <source media="(max-width: 768px)" srcset="img/logo-x1.png">
-              <img src="img/logo-x1.png" alt="" loading="lazy">
+              <!-- <source media="(min-width: 769px)" srcset="img/logo-x2.png"> -->
+              <!-- <source media="(max-width: 768px)" srcset="img/logo-x1.png"> -->
+              <img src="img/logo.svg" alt="" loading="lazy">
             </picture>
           </a>
 
@@ -475,9 +475,9 @@
           <div class="footer__content">
             <a href="/" class="logo">
               <picture class="logo__img">
-                <source media="(min-width: 769px)" srcset="img/logo-x2.png">
-                <source media="(max-width: 768px)" srcset="img/logo-x1.png">
-                <img src="img/logo-x1.png" alt="" loading="lazy">
+                <!-- <source media="(min-width: 769px)" srcset="img/logo-x2.png"> -->
+                <!-- <source media="(max-width: 768px)" srcset="img/logo-x1.png"> -->
+                <img src="img/logo.svg" alt="" loading="lazy">
               </picture>
             </a>
 
@@ -734,6 +734,21 @@
 
     <!-- Form -->
     <div style="display: none;">
+      <form action="#" class="form8 offer__form" method="POST" enctype="multipart/form-data">
+        <label class="form__label offer__form-label">
+          <input class="input input-name8 offer__form-input" type="text" data-validate-field="name" name="Имя"
+            placeholder="Ваше имя">
+        </label>
+        <label class="form__label offer__form-label">
+          <input class="input input-tel8 offer__form-input" type="tel" data-validate-field="tel" name="Телефон"
+            placeholder="Ваш телефон">
+        </label>
+        <label class="form__label offer__form-label">
+          <input class="input input-mail8 offer__form-input" type="email" data-validate-field="email" name="Email"
+            placeholder="Ваш E-mail">
+        </label>
+        <button class="btn modal__btn modal__btn-y" type="submit">Заказать тариф</button>
+      </form>
       <form action="#" class="form4 offer__form" method="POST" enctype="multipart/form-data">
         <label class="offer__form-label">
           <input class="input-name4 offer__form-input" type="text" data-validate-field="name" name="Имя"

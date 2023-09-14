@@ -179,6 +179,12 @@ const inputMask5 = new Inputmask('+7 (999) 999-99-99');
 inputMask5.mask(telSelector5);
 const validation5 = new JustValidate('.form5');
 
+const form8 = document.querySelector('.form8');
+const telSelector8 = form8.querySelector('input[type="tel"]');
+const inputMask8 = new Inputmask('+7 (999) 999-99-99');
+inputMask8.mask(telSelector8);
+const validation8 = new JustValidate('.form8');
+
 validation
   .addField('.input-name', [
     {
@@ -466,6 +472,63 @@ validation5
     event.target.reset();
   });
 
+validation8
+  .addField('.input-name8', [
+    {
+      rule: 'required',
+      value: true,
+      errorMessage: ' '
+    }
+  ])
+  .addField('.input-mail8', [
+    {
+      rule: 'required',
+      value: true,
+      errorMessage: ' ',
+    },
+    {
+      rule: 'email',
+      value: true,
+      errorMessage: ' ',
+    },
+  ])
+  .addField('.input-tel8', [
+    {
+      rule: 'required',
+      value: true,
+      errorMessage: ' ',
+    },
+    {
+      rule: 'function',
+      validator: function () {
+        const phone8 = telSelector8.inputmask.unmaskedvalue();
+        return phone8.length === 10;
+      },
+      errorMessage: ' ',
+    },
+  ]).onSuccess((event) => {
+    console.log('Validation passes and form submitted', event);
+
+    let formData = new FormData(event.target);
+
+    console.log(...formData);
+
+    let xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          console.log('Отправлено');
+        }
+      }
+    }
+
+    xhr.open('POST', 'mail.php', true);
+    xhr.send(formData);
+
+    event.target.reset();
+  });
+
 /* ////////////////////////////////////////////////////////////////////////////////////////////*/
 
 const modalBTN = document.querySelectorAll('[data-modal]');
@@ -482,7 +545,7 @@ modalBTN.forEach(item => {
     let modalID = $this.getAttribute('data-modal');
     let modal = document.getElementById(modalID);
     let modalContent = modal.querySelector('.modals_content');
-    // let modalTitle = document.querySelector('#modal-title');
+    let modalTitle = document.querySelector('#modal-title');
 
     modalContent.addEventListener('click', event => {
       event.stopPropagation();
@@ -525,10 +588,3 @@ function closeModal(currentModal) {
     body.classList.remove('no-scroll');
   }, 200);
 }
-
-let popupTarif = document.querySelector('[data-tarif]');
-
-popupTarif.onclick = function () {
-  modalTitle.innerHTML = "Заказать тариф";
-  modalBtn.innerHTML = "Заказать тариф";
-};

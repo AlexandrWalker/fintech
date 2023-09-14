@@ -39,9 +39,9 @@
 
           <a href="/" class="logo">
             <picture class="logo__img">
-              <source media="(min-width: 769px)" srcset="img/logo-x2.png">
-              <source media="(max-width: 768px)" srcset="img/logo-x1.png">
-              <img src="img/logo-x1.png" alt="" loading="lazy">
+              <!-- <source media="(min-width: 769px)" srcset="img/logo-x2.png"> -->
+              <!-- <source media="(max-width: 768px)" srcset="img/logo-x1.png"> -->
+              <img src="img/logo.svg" alt="" loading="lazy">
             </picture>
           </a>
 
@@ -823,7 +823,7 @@
                     </div>
 
                     <div class="tarif-slide__btn">
-                      <button class="btn btn--tarif" data-modal="popup-1" type="button"
+                      <button class="btn btn--tarif" data-modal="popup-8" type="button"
                         data-tarif="popup-tarif">Выбрать</button>
                     </div>
                   </div>
@@ -869,7 +869,7 @@
                     </div>
 
                     <div class="tarif-slide__btn">
-                      <button class="btn btn--tarif" data-modal="popup-1" type="button"
+                      <button class="btn btn--tarif" data-modal="popup-8" type="button"
                         data-tarif="popup-tarif">Выбрать</button>
                     </div>
                   </div>
@@ -921,7 +921,7 @@
                     </div>
 
                     <div class="tarif-slide__btn">
-                      <button class="btn btn--tarif" data-modal="popup-1" type="button"
+                      <button class="btn btn--tarif" data-modal="popup-8" type="button"
                         data-tarif="popup-tarif">Выбрать</button>
                     </div>
                   </div>
@@ -969,7 +969,7 @@
                     </div>
 
                     <div class="tarif-slide__btn">
-                      <button class="btn btn--tarif" data-modal="popup-1" type="button"
+                      <button class="btn btn--tarif" data-modal="popup-8" type="button"
                         data-tarif="popup-tarif">Выбрать</button>
                     </div>
                   </div>
@@ -1017,7 +1017,7 @@
                     </div>
 
                     <div class="tarif-slide__btn">
-                      <button class="btn btn--tarif" data-modal="popup-1" type="button"
+                      <button class="btn btn--tarif" data-modal="popup-8" type="button"
                         data-tarif="popup-tarif">Выбрать</button>
                     </div>
                   </div>
@@ -1353,9 +1353,9 @@
           <div class="footer__content">
             <a href="/" class="logo">
               <picture class="logo__img">
-                <source media="(min-width: 769px)" srcset="img/logo-x2.png">
-                <source media="(max-width: 768px)" srcset="img/logo-x1.png">
-                <img src="img/logo-x1.png" alt="" loading="lazy">
+                <!-- <source media="(min-width: 769px)" srcset="img/logo-x2.png"> -->
+                <!-- <source media="(max-width: 768px)" srcset="img/logo-x1.png"> -->
+                <img src="img/logo.svg" alt="" loading="lazy">
               </picture>
             </a>
 
@@ -1431,6 +1431,37 @@
             </label>
             <div class="modal__btns">
               <button class="btn modal__btn modal__btn-y" type="submit" id="modal-btn">Заказать звонок</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="modals" id="popup-8">
+      <div class="modals_content">
+        <button class="modals_close" type="button">
+          <img class="modals_close-img" src="img/close.svg" alt="Закрыть">
+        </button>
+        <div class="modal__top">
+          <div class="modal__title">Заказать тариф</div>
+          <div class="modal__subtitle">Укажите ваши актуальные данные, мы свяжемся с вами в течении 15 минут</div>
+        </div>
+        <div class="modal__question">
+          <form action="#" class="form8 offer__form" method="POST" enctype="multipart/form-data">
+            <label class="form__label offer__form-label">
+              <input class="input input-name8 offer__form-input" type="text" data-validate-field="name" name="Имя"
+                placeholder="Ваше имя">
+            </label>
+            <label class="form__label offer__form-label">
+              <input class="input input-tel8 offer__form-input" type="tel" data-validate-field="tel" name="Телефон"
+                placeholder="Ваш телефон">
+            </label>
+            <label class="form__label offer__form-label">
+              <input class="input input-mail8 offer__form-input" type="email" data-validate-field="email" name="Email"
+                placeholder="Ваш E-mail">
+            </label>
+            <div class="modal__btns">
+              <button class="btn modal__btn modal__btn-y" type="submit">Заказать тариф</button>
             </div>
           </form>
         </div>
