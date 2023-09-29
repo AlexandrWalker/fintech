@@ -85,6 +85,17 @@ var swiper = new Swiper(".cases-slider", {
   },
 });
 
+var swiper = new Swiper(".certificate-slider", {
+  loop: true,
+  slidesPerView: 1,
+  spaceBetween: 80,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+    disabledClass: "swiper-button-enabled",
+  },
+});
+
 /* Accordion */
 (function () {
   var accordionItem = document.querySelectorAll('.accordion__item'),
