@@ -1759,7 +1759,7 @@ main {
   width: 100%;
   overflow: clip;
   margin: 0;
-  padding: 0 60px;
+  padding: 0 20px;
 }
 
 .certificate-slider .swiper-button-next {
@@ -4620,10 +4620,6 @@ main {
 
   .certificate__content .title {
     word-break: break-all;
-  }
-
-  .certificate-slider {
-    padding: 0 20px;
   }
 
   .certificate__link {
